@@ -1,4 +1,7 @@
 package com.example.gamezone.service.impl;
 
-public class EmployeeServiceImpl {
+import com.example.gamezone.model.Person;
+import com.example.gamezone.service.PersonService;
+
+public class EmployeeServiceImpl implements PersonService {
 }

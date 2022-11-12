@@ -1,0 +1,5 @@
+#principal{
+    -fx-background-image: url("../images/fondo.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}

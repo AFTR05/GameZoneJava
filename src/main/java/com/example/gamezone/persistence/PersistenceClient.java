@@ -15,7 +15,7 @@ public class PersistenceClient {
     public static void savePeople(ArrayList<Client> listClient) throws IOException {
         String contenido = "";
         for(Client client: listClient) {
-            contenido+= client.getName()+"/"+client.getCode()+"/"+client.getAmountLoan()+"\n";
+            contenido+= client.getName()+"/"+client.getEmail()+"/"+client.getPassword()+"/"+client.getAmountLoan()+"\n";
         }
         ArchiveUtil.saveArchive(RUTE_ARCHIVE_CLIENT, contenido, false);
     }
@@ -28,8 +28,9 @@ public class PersistenceClient {
             Client myClient = new Client();
             line= content.get(i);
             myClient.setName(line.split("/")[0]);
-            myClient.setCode(line.split("/")[1]);
-            myClient.setAmountLoan(Integer.parseInt(line.split("/")[2]));
+            myClient.setEmail(line.split("/")[1]);
+            myClient.setPassword(line.split("/")[2]);
+            myClient.setAmountLoan(Integer.parseInt(line.split("/")[3]));
             clients.add(myClient);
         }
         return clients;

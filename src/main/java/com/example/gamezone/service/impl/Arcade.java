@@ -2,15 +2,20 @@ package com.example.gamezone.service.impl;
 
 import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.service.PersonService;
+import com.example.gamezone.utilities.ChangerFXML;
+import com.example.gamezone.utilities.LoginAction;
+import com.example.gamezone.utilities.SercherObject;
 
 public class Arcade {
     private final PersonService administratorService;
     private final AttractionServiceImpl attractionService;
-    private final PersonService clientService;
-    private final PersonService employeeService;
+    private final ClientServiceImpl clientService;
+    private final EmployeeServiceImpl employeeService;
     private final LoanServiceImpl loanService;
-    private final PracticeCollectionService practiceCollectionService;
     private final PersistenceClient persistenceClient;
+    private final ChangerFXML changerFXML;
+    private final SercherObject sercherObject;
+    private final LoginAction loginAction;
 
     public Arcade() {
         this.administratorService = new AdministratorServiceImpl();
@@ -18,35 +23,34 @@ public class Arcade {
         this.clientService = new ClientServiceImpl();
         this.employeeService = new EmployeeServiceImpl();
         this.loanService = new LoanServiceImpl();
-        this.practiceCollectionService = new PracticeCollectionService();
         this.persistenceClient=new PersistenceClient();
+        this.changerFXML=new ChangerFXML();
+        this.sercherObject=new SercherObject();
+        this.loginAction=new LoginAction();
     }
 
+    public SercherObject getSercherObject() {return sercherObject;}
+    public ChangerFXML getChangerFXML() {return changerFXML;}
     public PersistenceClient getPersistenceClient() {
         return persistenceClient;
     }
-
     public PersonService getAdministratorService() {
         return administratorService;
     }
-
     public AttractionServiceImpl getAttractionService() {
         return attractionService;
     }
-
-    public PersonService getClientService() {
+    public ClientServiceImpl getClientService() {
         return clientService;
     }
-
-    public PersonService getEmployeeService() {
+    public EmployeeServiceImpl getEmployeeService() {
         return employeeService;
     }
-
     public LoanServiceImpl getLoanService() {
         return loanService;
     }
 
-    public PracticeCollectionService getPracticeCollectionService() {
-        return practiceCollectionService;
+    public LoginAction getLoginAction() {
+        return loginAction;
     }
 }

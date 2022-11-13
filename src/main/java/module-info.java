@@ -15,4 +15,9 @@ module com.example.gamezone {
     exports com.example.gamezone;
     exports com.example.gamezone.controller;
     opens com.example.gamezone.controller to javafx.fxml;
+
+    opens com.example.gamezone.DTOs to javafx.fxml;
+    exports com.example.gamezone.DTOs;
+    exports com.example.gamezone.persistence;
+    opens com.example.gamezone.persistence to javafx.fxml;
 }

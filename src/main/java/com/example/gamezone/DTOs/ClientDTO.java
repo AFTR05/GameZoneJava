@@ -23,4 +23,12 @@ public class ClientDTO {
         this.name = name;
         this.amountLoan = amountLoan;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public ClientDTO() {
+    }
 }

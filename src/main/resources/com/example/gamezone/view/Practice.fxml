@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.PracticeController">
+   <children>
+      <TableView fx:id="tablePractice" layoutX="149.0" layoutY="61.0" prefHeight="278.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="columnNamePractice" prefWidth="151.20001220703125" text="Name" />
+          <TableColumn fx:id="columnAmountLoanPractice" prefWidth="150.4000244140625" text="AmountLoan" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

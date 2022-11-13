@@ -11,6 +11,15 @@ public class ModelFactoryController {
     public static ModelFactoryController getInstance() {
         return SingletonHolder.eINSTANCE;
     }
+
+    public Arcade getArcade() {
+        return arcade;
+    }
+
+    public void setArcade(Arcade arcade) {
+        this.arcade = arcade;
+    }
+
     public ModelFactoryController() {
         arcade = new Arcade();
     }

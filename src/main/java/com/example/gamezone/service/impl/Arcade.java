@@ -1,5 +1,6 @@
 package com.example.gamezone.service.impl;
 
+import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.service.PersonService;
 
 public class Arcade {
@@ -9,6 +10,7 @@ public class Arcade {
     private final PersonService employeeService;
     private final LoanServiceImpl loanService;
     private final PracticeCollectionService practiceCollectionService;
+    private final PersistenceClient persistenceClient;
 
     public Arcade() {
         this.administratorService = new AdministratorServiceImpl();
@@ -17,6 +19,11 @@ public class Arcade {
         this.employeeService = new EmployeeServiceImpl();
         this.loanService = new LoanServiceImpl();
         this.practiceCollectionService = new PracticeCollectionService();
+        this.persistenceClient=new PersistenceClient();
+    }
+
+    public PersistenceClient getPersistenceClient() {
+        return persistenceClient;
     }
 
     public PersonService getAdministratorService() {

@@ -5,6 +5,7 @@ import com.example.gamezone.model.Employee;
 import com.example.gamezone.service.impl.ClientServiceImpl;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -13,10 +14,12 @@ public class Application extends javafx.application.Application {
     ModelFactoryController mfc=ModelFactoryController.getInstance();
     @Override
     public void start(Stage stage) throws IOException {
+        mfc.getArcade().getAdministratorService().setAdministrator(mfc.getArcade().getPersistenceAdmin().chargeAdmin());
+        mfc.getArcade().getClientService().setListClients(mfc.getArcade().getPersistenceClient().chargeClient());
+        mfc.getArcade().getEmployeeService().setListEmployee(mfc.getArcade().getPersistenceEmployee().chargeEmployee());
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("view/Login/loginView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
-        stage.setAlwaysOnTop(true);
         stage.show();
     }
 

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminViewController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.ClientProfileViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: black;">
          <children>
@@ -28,7 +28,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Loans" />
+                              <Button fx:id="btnLoansClientProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="26.0" prefWidth="74.0" text="Loans" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -64,15 +64,23 @@
          <children>
             <AnchorPane prefHeight="501.0" prefWidth="606.0">
                <children>
-                  <TextField layoutX="143.0" layoutY="227.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" />
+                  <Button fx:id="btnLogoutProfileView" layoutX="553.0" layoutY="-1.0" mnemonicParsing="false" onAction="#Logout" prefHeight="7.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="txtUsernameClientProfile" layoutX="143.0" layoutY="227.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" />
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="224.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/icons8-user-96.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="143.0" layoutY="270.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" />
-                  <TextField layoutX="143.0" layoutY="318.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" />
-                  <Button layoutX="251.0" layoutY="375.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Make changes" />
+                  <TextField fx:id="txtEmailClientProfile" layoutX="143.0" layoutY="270.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" />
+                  <TextField fx:id="txtPasswordClientProfile" layoutX="143.0" layoutY="318.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" />
+                  <Button fx:id="btnSave" layoutX="270.0" layoutY="376.0" mnemonicParsing="false" onAction="#Save" prefHeight="26.0" prefWidth="58.0" text="Save" />
                   <Separator layoutY="28.0" opacity="0.2" orientation="VERTICAL" prefHeight="441.0" prefWidth="0.0" />
                </children>
             </AnchorPane>

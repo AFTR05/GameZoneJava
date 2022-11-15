@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="practica">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/admin.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/employees.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/fondo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-antecedentes-grupo-seleccionado-90 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-contrato-de-trabajo-100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-loan-64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-user-96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" afterDir="false" />
+    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Login terminado">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/logout.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/AdministratorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/AdministratorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,10 +51,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources\com\example\gamezone\images" />
+      <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources" />
       <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources\com\example\gamezone\view\Login" />
       <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources\com\example\gamezone\view\Client" />
       <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources\com\example\gamezone\view\Admin" />
-      <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\java\com\example\gamezone" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
@@ -143,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668380676374</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Login terminado">
+      <created>1668469039144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668469039144</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Login terminado">
+      <created>1668469131390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668469131390</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +158,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="practica" />
-    <option name="LAST_COMMIT_MESSAGE" value="practica" />
+    <MESSAGE value="Login terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login terminado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,11 +215,6 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
           <line>19</line>
           <option name="timeStamp" value="33" />
@@ -270,11 +265,6 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
           <line>12</line>
           <option name="timeStamp" value="44" />
@@ -300,14 +290,34 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java</url>
-          <line>17</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>51</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>52</line>
           <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

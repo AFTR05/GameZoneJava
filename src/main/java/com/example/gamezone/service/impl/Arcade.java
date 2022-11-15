@@ -1,9 +1,11 @@
 package com.example.gamezone.service.impl;
 
+import com.example.gamezone.controller.AdminProfileViewController;
+import com.example.gamezone.controller.ClientProfileViewController;
+import com.example.gamezone.controller.EmployeeProfileViewController;
 import com.example.gamezone.persistence.PersistenceAdmin;
 import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.persistence.PersistenceEmployee;
-import com.example.gamezone.service.PersonService;
 import com.example.gamezone.utilities.ChangerFXML;
 import com.example.gamezone.utilities.LoginAction;
 import com.example.gamezone.utilities.SercherObject;
@@ -20,8 +22,14 @@ public class Arcade {
     private final SercherObject sercherObject;
     private final LoginAction loginAction;
     private final PersistenceEmployee persistenceEmployee;
+    private final AdminProfileViewController adminViewController;
+    private final ClientProfileViewController clientViewController;
+    private final EmployeeProfileViewController employeeViewController;
 
     public Arcade() {
+        this.adminViewController=new AdminProfileViewController();
+        this.clientViewController=new ClientProfileViewController();
+        this.employeeViewController=new EmployeeProfileViewController();
         this.persistenceAdmin=new PersistenceAdmin();
         this.persistenceEmployee=new PersistenceEmployee();
         this.administratorService = new AdministratorServiceImpl();
@@ -37,6 +45,18 @@ public class Arcade {
 
     public PersistenceAdmin getPersistenceAdmin() {
         return persistenceAdmin;
+    }
+
+    public AdminProfileViewController getAdminViewController() {
+        return adminViewController;
+    }
+
+    public ClientProfileViewController getClientViewController() {
+        return clientViewController;
+    }
+
+    public EmployeeProfileViewController getEmployeeViewController() {
+        return employeeViewController;
     }
 
     public SercherObject getSercherObject() {return sercherObject;}

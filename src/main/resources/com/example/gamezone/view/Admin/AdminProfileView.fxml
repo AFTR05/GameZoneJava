@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminViewController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminProfileViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #051821;">
          <children>
@@ -27,7 +27,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Loans" />
+                              <Button fx:id="btnLoansAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="26.0" prefWidth="74.0" text="Loans" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -44,7 +44,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" text="Employees" />
+                              <Button fx:id="btnEmployeesAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToEmployees" text="Employees" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -61,12 +61,12 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Clients" />
+                              <Button fx:id="btnClientsAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToClients" prefHeight="26.0" prefWidth="74.0" text="Clients" />
                            </children>
                         </AnchorPane>
                      </children>
                   </HBox>
-                  <HBox layoutX="6.0" layoutY="168.0" prefHeight="18.0" prefWidth="187.0">
+                  <HBox layoutX="6.0" layoutY="174.0" prefHeight="18.0" prefWidth="187.0">
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
@@ -96,15 +96,24 @@
          <children>
             <AnchorPane prefHeight="501.0" prefWidth="606.0">
                <children>
-                  <TextField layoutX="143.0" layoutY="227.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" />
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="224.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                  <Button fx:id="btnLogoutAdminProfile" layoutX="525.0" layoutY="11.0" mnemonicParsing="false" onAction="#Logout" prefHeight="42.0" prefWidth="40.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="txtUsernameAdminProfile" layoutX="143.0" layoutY="252.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="224.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/icons8-user-96.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="143.0" layoutY="270.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" />
-                  <TextField layoutX="143.0" layoutY="318.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" />
-                  <Button layoutX="251.0" layoutY="375.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Make changes" />
+                  <TextField fx:id="txtEmailAdminProfile" layoutX="143.0" layoutY="295.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" />
+                  <TextField fx:id="txtPasswordAdminProfile" layoutX="143.0" layoutY="343.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" />
+                  <Button fx:id="btnSaveAdminProfile" layoutX="270.0" layoutY="400.0" mnemonicParsing="false" onAction="#Save" prefHeight="26.0" prefWidth="60.0" text="Save" />
                   <Separator layoutY="28.0" opacity="0.2" orientation="VERTICAL" prefHeight="441.0" prefWidth="0.0" />
                </children>
             </AnchorPane>

@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Login terminado">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/logout.png" afterDir="false" />
+    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Revisar Admin 67">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/exceptions/CloneException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/exceptions/InputException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/AlertGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChargerData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ShowInputs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/UpdaterObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/VerificatorClone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/CloneValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/EmptyValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/admin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/admin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/clients.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/clients.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/employees.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/employees.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/loginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/signUpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/signUpView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +57,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AFTR/Documents/Andres/Programacion/Java/javaPractica2/javaproject1_20&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/AFTR/Documents/Andres/Programacion/Java/TrabajosConJuancho/laboratoryCue",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AFTR\Documents\Andres\Programacion\Java\proyectosJava\gameZone\src\main\resources\com\example\gamezone\images" />
@@ -142,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668469131390</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Revisar Admin 67">
+      <created>1668479803683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668479803683</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,165 +184,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="practica" />
     <MESSAGE value="Login terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login terminado" />
+    <MESSAGE value="Revisar Admin 67" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revisar Admin 67" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChangerFXML.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ShowInputs.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
           <line>14</line>
-          <option name="timeStamp" value="47" />
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/LoginAction.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
           <line>15</line>
-          <option name="timeStamp" value="48" />
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="56" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceAdmin.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

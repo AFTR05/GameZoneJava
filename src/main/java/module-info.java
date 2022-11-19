@@ -20,4 +20,6 @@ module com.example.gamezone {
     exports com.example.gamezone.DTOs;
     exports com.example.gamezone.persistence;
     opens com.example.gamezone.persistence to javafx.fxml;
+
+    opens com.example.gamezone.view.Employee to javafx.fxml;
 }

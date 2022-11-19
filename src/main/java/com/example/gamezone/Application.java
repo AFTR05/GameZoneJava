@@ -14,9 +14,7 @@ public class Application extends javafx.application.Application {
     ModelFactoryController mfc=ModelFactoryController.getInstance();
     @Override
     public void start(Stage stage) throws IOException {
-        mfc.getArcade().getAdministratorService().setAdministrator(mfc.getArcade().getPersistenceAdmin().chargeAdmin());
-        mfc.getArcade().getClientService().setListClients(mfc.getArcade().getPersistenceClient().chargeClient());
-        mfc.getArcade().getEmployeeService().setListEmployee(mfc.getArcade().getPersistenceEmployee().chargeEmployee());
+        mfc.getArcade().getChargerData().chargeData(mfc);
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("view/Login/loginView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

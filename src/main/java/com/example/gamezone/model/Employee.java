@@ -10,4 +10,12 @@ public class Employee extends Person{
     public void setTotalIncome(double totalIncome) {
         this.totalIncome = totalIncome;
     }
+
+    public Employee(String name, String password, String email) {
+        super(name, password, email);
+    }
+
+    public Employee(){
+        super();
+    }
 }

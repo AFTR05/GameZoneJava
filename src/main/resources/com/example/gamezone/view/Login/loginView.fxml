@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="principal" fx:id="loginScreen" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="483.0" styleClass="bg-img" stylesheets="@../../css/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.LoginViewController">
+<AnchorPane id="principal" fx:id="loginScreen" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" styleClass="bg-img" stylesheets="@../../css/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.LoginViewController">
     <children>
-        <AnchorPane layoutX="100.0" layoutY="49.0" prefHeight="276.0" prefWidth="282.0" styleClass="content">
+        <AnchorPane layoutX="258.0" layoutY="111.0" prefHeight="276.0" prefWidth="282.0" styleClass="content">
             <children>
                 <Text fill="WHITE" fontSmoothingType="LCD" layoutX="96.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
                     <font>

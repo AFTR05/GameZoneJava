@@ -6,11 +6,12 @@ import com.example.gamezone.controller.EmployeeProfileViewController;
 import com.example.gamezone.persistence.PersistenceAdmin;
 import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.persistence.PersistenceEmployee;
-import com.example.gamezone.utilities.ChangerFXML;
-import com.example.gamezone.utilities.LoginAction;
-import com.example.gamezone.utilities.SercherObject;
+import com.example.gamezone.utilities.*;
+import com.example.gamezone.validations.CloneValidator;
+import com.example.gamezone.validations.EmptyValidator;
 
 public class Arcade {
+    private final ShowInputs showInputs;
     private final PersistenceAdmin persistenceAdmin;
     private final AdministratorServiceImpl administratorService;
     private final AttractionServiceImpl attractionService;
@@ -25,8 +26,21 @@ public class Arcade {
     private final AdminProfileViewController adminViewController;
     private final ClientProfileViewController clientViewController;
     private final EmployeeProfileViewController employeeViewController;
+    private final VerificatorClone verificatorClone;
+    private final ChargerData chargerData;
+    private final AlertGenerator alertGenerator;
+    private final CloneValidator cloneValidator;
+    private final EmptyValidator emptyValidator;
+    private final UpdaterObject updaterObject;
 
     public Arcade() {
+        this.updaterObject=new UpdaterObject();
+        this.cloneValidator=new CloneValidator();
+        this.emptyValidator=new EmptyValidator();
+        this.alertGenerator=new AlertGenerator();
+        this.showInputs=new ShowInputs();
+        this.chargerData=new ChargerData();
+        this.verificatorClone=new VerificatorClone();
         this.adminViewController=new AdminProfileViewController();
         this.clientViewController=new ClientProfileViewController();
         this.employeeViewController=new EmployeeProfileViewController();
@@ -41,6 +55,34 @@ public class Arcade {
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction();
+    }
+
+    public UpdaterObject getUpdaterObject() {
+        return updaterObject;
+    }
+
+    public CloneValidator getCloneValidator() {
+        return cloneValidator;
+    }
+
+    public EmptyValidator getEmptyValidator() {
+        return emptyValidator;
+    }
+
+    public AlertGenerator getAlertGenerator() {
+        return alertGenerator;
+    }
+
+    public ShowInputs getShowInputs() {
+        return showInputs;
+    }
+
+    public ChargerData getChargerData() {
+        return chargerData;
+    }
+
+    public VerificatorClone getVerificatorClone() {
+        return verificatorClone;
     }
 
     public PersistenceAdmin getPersistenceAdmin() {

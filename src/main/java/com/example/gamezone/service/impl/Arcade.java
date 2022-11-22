@@ -1,5 +1,6 @@
 package com.example.gamezone.service.impl;
 
+import com.example.gamezone.controller.AdminModalEmployeeSalaryViewController;
 import com.example.gamezone.controller.AdminProfileViewController;
 import com.example.gamezone.controller.ClientProfileViewController;
 import com.example.gamezone.controller.EmployeeProfileViewController;
@@ -8,9 +9,12 @@ import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.persistence.PersistenceEmployee;
 import com.example.gamezone.utilities.*;
 import com.example.gamezone.validations.CloneValidator;
+import com.example.gamezone.validations.EmailValidator;
 import com.example.gamezone.validations.EmptyValidator;
+import com.example.gamezone.validations.SelectValidator;
 
 public class Arcade {
+    private final PreparatorTable preparatorTable;
     private final ShowInputs showInputs;
     private final PersistenceAdmin persistenceAdmin;
     private final AdministratorServiceImpl administratorService;
@@ -32,8 +36,21 @@ public class Arcade {
     private final CloneValidator cloneValidator;
     private final EmptyValidator emptyValidator;
     private final UpdaterObject updaterObject;
+    private final EmailValidator emailValidator;
+    private final ConvertToObservableList convertToObservableList;
+    private final DeleteInfoInputs deleteInfoInputs;
+    private final SelectValidator selectValidator;
+    private final AjustableData ajustableData;
+    private final AdminModalEmployeeSalaryViewController adminModalEmployeeSalaryViewController;
 
     public Arcade() {
+        this.adminModalEmployeeSalaryViewController=new AdminModalEmployeeSalaryViewController();
+        this.ajustableData=new AjustableData();
+        this.selectValidator=new SelectValidator();
+        this.deleteInfoInputs=new DeleteInfoInputs();
+        this.preparatorTable=new PreparatorTable();
+        this.convertToObservableList=new ConvertToObservableList();
+        this.emailValidator=new EmailValidator();
         this.updaterObject=new UpdaterObject();
         this.cloneValidator=new CloneValidator();
         this.emptyValidator=new EmptyValidator();
@@ -55,6 +72,34 @@ public class Arcade {
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction();
+    }
+
+    public AdminModalEmployeeSalaryViewController getAdminModalEmployeeSalaryViewController() {
+        return adminModalEmployeeSalaryViewController;
+    }
+
+    public AjustableData getAjustableData() {
+        return ajustableData;
+    }
+
+    public SelectValidator getSelectValidator() {
+        return selectValidator;
+    }
+
+    public DeleteInfoInputs getDeleteInfoInputs() {
+        return deleteInfoInputs;
+    }
+
+    public PreparatorTable getPreparatorTable() {
+        return preparatorTable;
+    }
+
+    public ConvertToObservableList getConvertToObservableList() {
+        return convertToObservableList;
+    }
+
+    public EmailValidator getEmailValidator() {
+        return emailValidator;
     }
 
     public UpdaterObject getUpdaterObject() {

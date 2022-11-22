@@ -22,4 +22,8 @@ module com.example.gamezone {
     opens com.example.gamezone.persistence to javafx.fxml;
 
     opens com.example.gamezone.view.Employee to javafx.fxml;
+    opens com.example.gamezone.model to javafx.fxml;
+    exports com.example.gamezone.model;
+
+    opens com.example.gamezone.view.Admin to javafx.fxml;
 }

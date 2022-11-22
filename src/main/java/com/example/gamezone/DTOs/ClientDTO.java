@@ -2,6 +2,7 @@ package com.example.gamezone.DTOs;
 
 public class ClientDTO {
     private String name;
+    private String email;
     private int amountLoan;
     public int getAmountLoan() {
         return amountLoan;
@@ -19,14 +20,18 @@ public class ClientDTO {
         this.name = name;
     }
 
-    public ClientDTO(String name, int amountLoan) {
+    public ClientDTO(String name, int amountLoan,String email) {
         this.name = name;
         this.amountLoan = amountLoan;
+        this.email=email;
     }
 
-    @Override
-    public String toString() {
-        return name;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public ClientDTO() {

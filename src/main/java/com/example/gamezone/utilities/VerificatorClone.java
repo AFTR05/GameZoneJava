@@ -11,7 +11,7 @@ public class VerificatorClone {
         Boolean resultado=false;
         for (Person person : people) {
             resultado = (name.equals(person.getName())) ? false : true;
-            if (resultado==false)break;
+            if (!resultado)break;
         }
         return resultado;
     }
@@ -22,10 +22,17 @@ public class VerificatorClone {
     }
 
     public Boolean verifyName(String name,String adminName,HashSet<Client> clients,HashSet<Employee> employees){
-        if (verifyNameProfile(name, clients)&&verifyNameProfile(name,employees) && verifyNameAdmin(name, adminName)){
-            return true;
-        }
-        return false;
+        return (verifyNameProfile(name, clients)&&verifyNameProfile(name,employees) && verifyNameAdmin(name, adminName));
     }
+
+    public Boolean verifyEmail(String email,HashSet<? extends Person> people){
+        Boolean resultado=true;
+        for (Person person:people){
+            resultado = (email.equals(person.getEmail())) ? false : true;
+            if (!resultado)break;
+        }
+        return resultado;
+    }
+
 
 }

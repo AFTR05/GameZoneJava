@@ -1,5 +1,6 @@
 package com.example.gamezone.service.impl;
 
+import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.model.Client;
 import com.example.gamezone.service.PersonService;
 
@@ -15,5 +16,15 @@ public class ClientServiceImpl implements PersonService {
 
     public void setListClients(HashSet<Client> listClients) {
         this.listClients = listClients;
+    }
+
+    @Override
+    public void createPerson(String name, String email, String password) {
+        listClients.add(new Client(name,email,password));
+    }
+
+    @Override
+    public void deletePerson(String name, String password,ModelFactoryController mfc) {
+
     }
 }

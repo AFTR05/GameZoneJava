@@ -16,10 +16,10 @@ public class LoginAction {
     }
 
     public String DefaultLogin(String name, String password, ModelFactoryController mfc){
-        if (mfc.getArcade().getSercherObject().getClient(name,password,mfc.getArcade().getClientService().getListClients())!=null){
+        if (mfc.getArcade().getSercherObject().getPerson(name,password,mfc.getArcade().getClientService().getListClients())!=null){
            return "client";
         }
-        if (mfc.getArcade().getSercherObject().getEmployee(name,password,mfc.getArcade().getEmployeeService().getListEmployee())!=null){
+        if (mfc.getArcade().getSercherObject().getPerson(name,password,mfc.getArcade().getEmployeeService().getListEmployee())!=null){
             return "employee";
         }
         return "";

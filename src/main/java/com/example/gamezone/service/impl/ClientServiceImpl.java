@@ -9,6 +9,10 @@ import java.util.Set;
 
 public class ClientServiceImpl implements PersonService {
     private HashSet<Client> listClients;
+    private final Arcade arcade;
+    public ClientServiceImpl(Arcade arcade){
+        this.arcade=arcade;
+    }
 
     public HashSet<Client> getListClients() {
         return listClients;
@@ -24,7 +28,7 @@ public class ClientServiceImpl implements PersonService {
     }
 
     @Override
-    public void deletePerson(String name, String password,ModelFactoryController mfc) {
+    public void deletePerson(String name, String password) {
 
     }
 }

@@ -31,6 +31,7 @@ public class AdminModalEmployeeSalaryViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         tableModelEmployeeSalary.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             employeeDTOSelected =newSelection;
             mfc.getArcade().getShowInputs().showEmployeeDTO(employeeDTOSelected,txtUsernameModalEmployee,txtEmailModalEmployee,txtSalaryModalEmployee);

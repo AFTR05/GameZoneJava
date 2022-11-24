@@ -16,7 +16,7 @@ public class SighUpViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        mfc.getArcade().getChargerData().chargeData(mfc);
+        mfc.getArcade().getChargerData().chargeData();
     }
 
     @FXML
@@ -39,7 +39,7 @@ public class SighUpViewController implements Initializable {
 
     @FXML
     void RegisterClient(ActionEvent event) throws IOException{
-        if(mfc.getArcade().getCloneValidator().verifySign(mfc,nameSignTxt.getText())&& mfc.getArcade().getEmptyValidator().validateEmpty3Space(mfc,nameSignTxt.getText(),EmailSighTxt.getText(),PasswordSighTxt.getText()) && mfc.getArcade().getEmailValidator().verifyEmail(EmailSighTxt.getText(),mfc)){
+        if(mfc.getArcade().getCloneValidator().verifySign(nameSignTxt.getText())&& mfc.getArcade().getEmptyValidator().validateEmpty3Space(nameSignTxt.getText(),EmailSighTxt.getText(),PasswordSighTxt.getText()) && mfc.getArcade().getEmailValidator().verifyEmail(EmailSighTxt.getText())){
             mfc.createClient(nameSignTxt.getText(), EmailSighTxt.getText(),PasswordSighTxt.getText());
             mfc.getArcade().getPersistenceClient().saveClients(mfc.getArcade().getClientService().getListClients());
             mfc.getArcade().getAlertGenerator().alertInformation("you can login now","The client was created successfully");

@@ -24,7 +24,7 @@ public class AdminProfileViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        mfc.getArcade().getChargerData().chargeData(mfc);
+        mfc.getArcade().getChargerData().chargeData();
         meAdmin=mfc.getArcade().getAdminViewController().getMeAdmin();
         mfc.getArcade().getShowInputs().showInProfile(txtUsernameAdminProfile,txtEmailAdminProfile,txtPasswordAdminProfile,meAdmin);
     }
@@ -61,7 +61,7 @@ public class AdminProfileViewController implements Initializable {
 
     @FXML
     void Save(ActionEvent event) throws IOException{
-        if (mfc.getArcade().getCloneValidator().verifyClone(mfc,txtUsernameAdminProfile.getText(),meAdmin) && mfc.getArcade().getEmptyValidator().validateEmpty3Space(mfc,txtUsernameAdminProfile.getText(),txtEmailAdminProfile.getText(),txtPasswordAdminProfile.getText())&&mfc.getArcade().getEmailValidator().verifyEmail(txtEmailAdminProfile.getText(),mfc)){
+        if (mfc.getArcade().getCloneValidator().verifyClone(txtUsernameAdminProfile.getText(),meAdmin) && mfc.getArcade().getEmptyValidator().validateEmpty3Space(txtUsernameAdminProfile.getText(),txtEmailAdminProfile.getText(),txtPasswordAdminProfile.getText())&&mfc.getArcade().getEmailValidator().verifyEmail(txtEmailAdminProfile.getText())){
             mfc.getArcade().getUpdaterObject().personUpdate(mfc.getArcade().getAdministratorService().getAdministrator(),txtUsernameAdminProfile.getText(),txtEmailAdminProfile.getText(),txtPasswordAdminProfile.getText());
             mfc.getArcade().getPersistenceAdmin().saveAdministrator(mfc.getArcade().getAdministratorService().getAdministrator());
             mfc.getArcade().getAlertGenerator().alertInformation("Successful update",null);

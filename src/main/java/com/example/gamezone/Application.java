@@ -14,7 +14,7 @@ public class Application extends javafx.application.Application {
     ModelFactoryController mfc=ModelFactoryController.getInstance();
     @Override
     public void start(Stage stage) throws IOException {
-        mfc.getArcade().getChargerData().chargeData(mfc);
+        mfc.getArcade().getChargerData().chargeData();
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("view/Login/loginView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);

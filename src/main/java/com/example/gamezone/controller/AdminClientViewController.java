@@ -21,6 +21,7 @@ public class AdminClientViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         observableClients=mfc.getArcade().getConvertToObservableList().clientDTObservable(mfc.getArcade().getClientService().getListClients(),observableClients);
         mfc.getArcade().getPreparatorTable().prepareTableClient(columnUsernameClientAdmin,columnEmailClientAdmin,columnAmountClientAdmin);
         tableClientAdmin.setItems(observableClients);

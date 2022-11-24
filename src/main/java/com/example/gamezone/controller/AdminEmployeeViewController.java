@@ -23,6 +23,7 @@ public class AdminEmployeeViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         employeeObservableList=mfc.getArcade().getConvertToObservableList().EmployeeObservableList(mfc.getArcade().getEmployeeService().getListEmployee(),employeeObservableList);
         mfc.getArcade().getPreparatorTable().prepareTablePerson(columnUsernameEmployeeAdmin,columnEmailEmployeeAdmin,columnPasswordEmployeeAdmin);
         tableEmployeeAdmin.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
@@ -93,18 +94,18 @@ public class AdminEmployeeViewController implements Initializable {
     }
     @FXML
     void createEmployee(ActionEvent event) throws IOException{
-        if (mfc.getArcade().getCloneValidator().verifySign(mfc,txtUsernameEmployeeAdmin.getText())&& mfc.getArcade().getEmptyValidator().validateEmpty3Space(mfc,txtUsernameEmployeeAdmin.getText(),txtEmailEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText()) && mfc.getArcade().getEmailValidator().verifyEmail(txtEmailEmployeeAdmin.getText(),mfc)){
+        if (mfc.getArcade().getCloneValidator().verifySign(txtUsernameEmployeeAdmin.getText())&& mfc.getArcade().getEmptyValidator().validateEmpty3Space(txtUsernameEmployeeAdmin.getText(),txtEmailEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText()) && mfc.getArcade().getEmailValidator().verifyEmail(txtEmailEmployeeAdmin.getText())){
             mfc.createEmployee(txtUsernameEmployeeAdmin.getText(),txtEmailEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText());
-            mfc.getArcade().getAjustableData().employeeAjust(mfc,employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
+            mfc.getArcade().getAjustableData().employeeAjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
         }
 
     }
 
     @FXML
     void deleteEmployee(ActionEvent event) throws IOException{
-        if (mfc.getArcade().getSelectValidator().validatePerson(employeeSelected,mfc)){
-            mfc.deleteEmployee(txtUsernameEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText(),mfc);
-            mfc.getArcade().getAjustableData().employeeAjust(mfc,employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
+        if (mfc.getArcade().getSelectValidator().validatePerson(employeeSelected)){
+            mfc.deleteEmployee(txtUsernameEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText());
+            mfc.getArcade().getAjustableData().employeeAjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
         }
 
     }

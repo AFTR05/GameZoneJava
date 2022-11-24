@@ -4,10 +4,15 @@ import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.exceptions.CloneException;
 import com.example.gamezone.model.Client;
 import com.example.gamezone.model.Person;
+import com.example.gamezone.service.impl.Arcade;
 
 public class CloneValidator {
-    public Boolean verifyClone(ModelFactoryController mfc, String name, Person mePerson){
-        if(mfc.getArcade().getVerificatorClone().verifyName(name,mfc.getArcade().getAdministratorService().getAdministrator().getName(),mfc.getArcade().getClientService().getListClients(),mfc.getArcade().getEmployeeService().getListEmployee())) {
+    private final Arcade arcade;
+    public CloneValidator(Arcade arcade){
+        this.arcade=arcade;
+    }
+    public Boolean verifyClone( String name, Person mePerson){
+        if(arcade.getVerificatorClone().verifyName(name,arcade.getAdministratorService().getAdministrator().getName(),arcade.getClientService().getListClients(),arcade.getEmployeeService().getListEmployee())) {
             return true;
         }else if (name.equals(mePerson.getName())){
             return true;
@@ -15,20 +20,20 @@ public class CloneValidator {
             try {
                 throw new CloneException("The name already exists");
             }catch (CloneException ce){
-                mfc.getArcade().getAlertGenerator().alertError(ce.getMessage(),null);
+                arcade.getAlertGenerator().alertError(ce.getMessage(),null);
                 return false;
             }
         }
     }
 
-    public Boolean verifySign(ModelFactoryController mfc,String name){
-        if(mfc.getArcade().getVerificatorClone().verifyName(name,mfc.getArcade().getAdministratorService().getAdministrator().getName(),mfc.getArcade().getClientService().getListClients(),mfc.getArcade().getEmployeeService().getListEmployee())) {
+    public Boolean verifySign(String name){
+        if(arcade.getVerificatorClone().verifyName(name,arcade.getAdministratorService().getAdministrator().getName(),arcade.getClientService().getListClients(),arcade.getEmployeeService().getListEmployee())) {
             return true;
         }else{
             try {
                 throw new CloneException("The name already exists");
             }catch (CloneException ce){
-                mfc.getArcade().getAlertGenerator().alertError(ce.getMessage(),null);
+                arcade.getAlertGenerator().alertError(ce.getMessage(),null);
                 return false;
             }
         }

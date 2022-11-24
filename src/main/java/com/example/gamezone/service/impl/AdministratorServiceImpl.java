@@ -7,6 +7,12 @@ import com.example.gamezone.service.PersonService;
 public class AdministratorServiceImpl implements PersonService{
     private Administrator administrator;
 
+    private final Arcade arcade;
+
+    public AdministratorServiceImpl(Arcade arcade){
+        this.arcade=arcade;
+    }
+
     public Administrator getAdministrator() {
         return administrator;
     }
@@ -23,7 +29,7 @@ public class AdministratorServiceImpl implements PersonService{
     }
 
     @Override
-    public void deletePerson(String name, String password,ModelFactoryController mfc) {
+    public void deletePerson(String name, String password) {
 
     }
 }

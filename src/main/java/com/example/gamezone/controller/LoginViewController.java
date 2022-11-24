@@ -3,6 +3,9 @@ package com.example.gamezone.controller;
 import com.example.gamezone.model.Administrator;
 import com.example.gamezone.model.Client;
 import com.example.gamezone.model.Employee;
+import com.example.gamezone.threads.AdminDataThread;
+import com.example.gamezone.threads.ClientDataThread;
+import com.example.gamezone.threads.EmployeeDataThread;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,7 +21,7 @@ import java.util.ResourceBundle;
 public class LoginViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        mfc.getArcade().getChargerData().chargeData(mfc);
+        mfc.getArcade().getChargerData().chargeData();
     }
 
     private ModelFactoryController mfc=ModelFactoryController.getInstance();
@@ -39,19 +42,25 @@ public class LoginViewController implements Initializable {
 
     @FXML
     void Login(ActionEvent event) throws IOException{
-        if(!mfc.getArcade().getLoginAction().adminLogin(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc)){
-            switch (mfc.getArcade().getLoginAction().DefaultLogin(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc)){
+        if(!mfc.getArcade().getLoginAction().adminLogin(usernameLoginTxt.getText(),passwordLoginTxt.getText())){
+            switch (mfc.getArcade().getLoginAction().DefaultLogin(usernameLoginTxt.getText(),passwordLoginTxt.getText())){
                 case "client":
+                    new ClientDataThread().start();
                     mfc.getArcade().getClientViewController().setMeClient((Client) mfc.getArcade().getSercherObject().getPerson(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc.getArcade().getClientService().getListClients()));
                     mfc.getArcade().getChangerFXML().sceneChange(event,"view/Client/ClientProfileView.fxml");
                     break;
                 case "employee":
+                    new EmployeeDataThread().run();
                     mfc.getArcade().getEmployeeViewController().setMeEmployee((Employee) mfc.getArcade().getSercherObject().getPerson(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc.getArcade().getEmployeeService().getListEmployee()));
                     mfc.getArcade().getChangerFXML().sceneChange(event,"view/Employee/EmployeeProfileView.fxml");
                     break;
-                case "":mfc.getArcade().getAlertGenerator().alertError("The person does not exits",null);break;
+                case "":
+
+                    mfc.getArcade().getAlertGenerator().alertError("The person does not exits",null);
+                    break;
             }
         }else {
+            new AdminDataThread().run();
             mfc.getArcade().getAdminViewController().setMeAdmin(mfc.getArcade().getAdministratorService().getAdministrator());
             mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
         }

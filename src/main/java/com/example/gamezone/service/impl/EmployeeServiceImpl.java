@@ -1,16 +1,18 @@
 package com.example.gamezone.service.impl;
 
 import com.example.gamezone.controller.ModelFactoryController;
-import com.example.gamezone.model.Client;
 import com.example.gamezone.model.Employee;
-import com.example.gamezone.model.Person;
 import com.example.gamezone.service.PersonService;
 
 import java.util.HashSet;
-import java.util.Set;
 
 public class EmployeeServiceImpl implements PersonService {
     private HashSet<Employee> listEmployee;
+    private final Arcade arcade;
+
+    public EmployeeServiceImpl(Arcade arcade) {
+        this.arcade = arcade;
+    }
 
     public HashSet<Employee> getListEmployee() {
         return listEmployee;
@@ -26,9 +28,9 @@ public class EmployeeServiceImpl implements PersonService {
     }
 
     @Override
-    public void deletePerson(String name, String password,ModelFactoryController mfc) {
-        Employee employee=(Employee) mfc.getArcade().getSercherObject().getPerson(name,password,listEmployee);
-        if (mfc.getArcade().getSelectValidator().validatePerson(employee,mfc)){
+    public void deletePerson(String name, String password) {
+        Employee employee=(Employee) arcade.getSercherObject().getPerson(name,password,listEmployee);
+        if (arcade.getSelectValidator().validatePerson(employee)){
             listEmployee.remove(employee);
         }
     }

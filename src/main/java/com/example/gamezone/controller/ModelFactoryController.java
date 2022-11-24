@@ -42,7 +42,7 @@ public class ModelFactoryController implements ModelFactoryService {
     }
 
     @Override
-    public void deleteEmployee(String name, String password,ModelFactoryController mfc) {
-        arcade.getEmployeeService().deletePerson(name,password,mfc);
+    public void deleteEmployee(String name, String password) {
+        arcade.getEmployeeService().deletePerson(name,password);
     }
 }

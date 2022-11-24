@@ -45,33 +45,33 @@ public class Arcade {
 
     public Arcade() {
         this.adminModalEmployeeSalaryViewController=new AdminModalEmployeeSalaryViewController();
-        this.ajustableData=new AjustableData();
-        this.selectValidator=new SelectValidator();
+        this.ajustableData=new AjustableData(this);
+        this.selectValidator=new SelectValidator(this);
         this.deleteInfoInputs=new DeleteInfoInputs();
         this.preparatorTable=new PreparatorTable();
         this.convertToObservableList=new ConvertToObservableList();
-        this.emailValidator=new EmailValidator();
+        this.emailValidator=new EmailValidator(this);
         this.updaterObject=new UpdaterObject();
-        this.cloneValidator=new CloneValidator();
-        this.emptyValidator=new EmptyValidator();
+        this.cloneValidator=new CloneValidator(this);
+        this.emptyValidator=new EmptyValidator(this);
         this.alertGenerator=new AlertGenerator();
         this.showInputs=new ShowInputs();
-        this.chargerData=new ChargerData();
+        this.chargerData=new ChargerData(this);
         this.verificatorClone=new VerificatorClone();
         this.adminViewController=new AdminProfileViewController();
         this.clientViewController=new ClientProfileViewController();
         this.employeeViewController=new EmployeeProfileViewController();
         this.persistenceAdmin=new PersistenceAdmin();
         this.persistenceEmployee=new PersistenceEmployee();
-        this.administratorService = new AdministratorServiceImpl();
+        this.administratorService = new AdministratorServiceImpl(this);
         this.attractionService = new AttractionServiceImpl();
-        this.clientService = new ClientServiceImpl();
-        this.employeeService = new EmployeeServiceImpl();
+        this.clientService = new ClientServiceImpl(this);
+        this.employeeService = new EmployeeServiceImpl(this);
         this.loanService = new LoanServiceImpl();
         this.persistenceClient=new PersistenceClient();
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
-        this.loginAction=new LoginAction();
+        this.loginAction=new LoginAction(this);
     }
 
     public AdminModalEmployeeSalaryViewController getAdminModalEmployeeSalaryViewController() {

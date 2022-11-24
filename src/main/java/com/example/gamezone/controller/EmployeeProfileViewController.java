@@ -26,7 +26,7 @@ public class EmployeeProfileViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        mfc.getArcade().getChargerData().chargeData(mfc);
+        mfc.getArcade().getChargerData().chargeData();
         meEmployee=mfc.getArcade().getEmployeeViewController().getMeEmployee();
         mfc.getArcade().getShowInputs().showInProfile(txtUsernameEmployeeProfile,txtEmailEmployeeProfile,txtPasswordEmployeeProfile,meEmployee);
     }
@@ -56,7 +56,7 @@ public class EmployeeProfileViewController implements Initializable {
 
     @FXML
     void Save(ActionEvent event) throws IOException{
-        if (mfc.getArcade().getCloneValidator().verifyClone(mfc,txtUsernameEmployeeProfile.getText(),meEmployee) && mfc.getArcade().getEmptyValidator().validateEmpty3Space(mfc,txtUsernameEmployeeProfile.getText(),txtEmailEmployeeProfile.getText(),txtPasswordEmployeeProfile.getText())&&mfc.getArcade().getEmailValidator().verifyEmail(txtEmailEmployeeProfile.getText(),mfc)) {
+        if (mfc.getArcade().getCloneValidator().verifyClone(txtUsernameEmployeeProfile.getText(),meEmployee) && mfc.getArcade().getEmptyValidator().validateEmpty3Space(txtUsernameEmployeeProfile.getText(),txtEmailEmployeeProfile.getText(),txtPasswordEmployeeProfile.getText())&&mfc.getArcade().getEmailValidator().verifyEmail(txtEmailEmployeeProfile.getText())) {
             mfc.getArcade().getUpdaterObject().personUpdate(mfc.getArcade().getSercherObject().getPerson(meEmployee.getName(),meEmployee.getPassword(),mfc.getArcade().getEmployeeService().getListEmployee()),txtUsernameEmployeeProfile.getText(),txtEmailEmployeeProfile.getText(),txtPasswordEmployeeProfile.getText());
             mfc.getArcade().getPersistenceEmployee().saveEmployee(mfc.getArcade().getEmployeeService().getListEmployee());
             mfc.getArcade().getAlertGenerator().alertInformation("Successful update",null);

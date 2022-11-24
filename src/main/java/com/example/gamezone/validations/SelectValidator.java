@@ -2,11 +2,16 @@ package com.example.gamezone.validations;
 
 import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.model.Person;
+import com.example.gamezone.service.impl.Arcade;
 
 public class SelectValidator {
-    public Boolean validatePerson(Person personSelected, ModelFactoryController mfc){
+    private final Arcade arcade;
+    public SelectValidator(Arcade arcade){
+        this.arcade=arcade;
+    }
+    public Boolean validatePerson(Person personSelected){
         if (personSelected==null){
-            mfc.getArcade().getAlertGenerator().alertError("The person is not selected","No selection");
+            arcade.getAlertGenerator().alertError("The person is not selected","No selection");
             return false;
         }else return true;
 

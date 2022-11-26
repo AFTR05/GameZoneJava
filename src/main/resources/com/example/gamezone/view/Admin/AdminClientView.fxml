@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -31,7 +32,10 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btnAttractionsAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToAttractions" prefHeight="26.0" prefWidth="74.0" text="Attractions" />
+                              <Button fx:id="btnAttractionsAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToAttractions" prefHeight="26.0" prefWidth="74.0" text="Attractions">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -49,7 +53,10 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btnLoanAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="26.0" prefWidth="74.0" text="Loans" />
+                              <Button fx:id="btnLoanAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="26.0" prefWidth="74.0" text="Loans">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -66,7 +73,10 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btnEmployeeAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToEmployees" text="Employees" />
+                              <Button fx:id="btnEmployeeAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToEmployees" text="Employees">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -83,7 +93,10 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btnClientAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToClients" prefHeight="26.0" prefWidth="74.0" text="Clients" />
+                              <Button fx:id="btnClientAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToClients" prefHeight="26.0" prefWidth="74.0" text="Clients">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </AnchorPane>
                      </children>
@@ -100,7 +113,10 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button fx:id="btnProfileAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToProfile" prefHeight="26.0" prefWidth="74.0" text="Profile" />
+                              <Button fx:id="btnProfileAdminClient" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToProfile" prefHeight="26.0" prefWidth="74.0" text="Profile">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
                            </children>
                         </AnchorPane>
                      </children>

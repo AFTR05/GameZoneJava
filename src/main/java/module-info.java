@@ -26,4 +26,6 @@ module com.example.gamezone {
     exports com.example.gamezone.model;
 
     opens com.example.gamezone.view.Admin to javafx.fxml;
+    opens com.example.gamezone.utilities to javafx.fxml;
+    exports com.example.gamezone.utilities to javafx.fxml;
 }

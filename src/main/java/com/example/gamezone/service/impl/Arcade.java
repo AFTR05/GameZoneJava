@@ -8,10 +8,7 @@ import com.example.gamezone.persistence.PersistenceAdmin;
 import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.persistence.PersistenceEmployee;
 import com.example.gamezone.utilities.*;
-import com.example.gamezone.validations.CloneValidator;
-import com.example.gamezone.validations.EmailValidator;
-import com.example.gamezone.validations.EmptyValidator;
-import com.example.gamezone.validations.SelectValidator;
+import com.example.gamezone.validations.*;
 
 public class Arcade {
     private final PreparatorTable preparatorTable;
@@ -42,8 +39,10 @@ public class Arcade {
     private final SelectValidator selectValidator;
     private final AjustableData ajustableData;
     private final AdminModalEmployeeSalaryViewController adminModalEmployeeSalaryViewController;
+    private final SalaryValidation salaryValidation;
 
     public Arcade() {
+        this.salaryValidation=new SalaryValidation(this);
         this.adminModalEmployeeSalaryViewController=new AdminModalEmployeeSalaryViewController();
         this.ajustableData=new AjustableData(this);
         this.selectValidator=new SelectValidator(this);
@@ -72,6 +71,10 @@ public class Arcade {
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction(this);
+    }
+
+    public SalaryValidation getSalaryValidation() {
+        return salaryValidation;
     }
 
     public AdminModalEmployeeSalaryViewController getAdminModalEmployeeSalaryViewController() {

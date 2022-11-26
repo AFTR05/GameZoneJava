@@ -26,4 +26,17 @@ public class EmptyValidator {
         }
     }
 
+    public Boolean validateEmptyNumber(String salary){
+        if(!(salary=="")){
+            return true;
+        }else {
+            try {
+                throw new InputException("Information is missing");
+            }catch (InputException ie){
+                arcade.getAlertGenerator().alertError(ie.getMessage(), "Lack of information");
+                return false;
+            }
+        }
+    }
+
 }

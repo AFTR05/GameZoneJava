@@ -25,6 +25,7 @@ public class ConvertToObservableList {
     }
 
     public ObservableList<EmployeeDTO> EmployeeDTObservableList(HashSet<Employee> listEmployee,ObservableList<EmployeeDTO> observableListEmployee){
+        observableListEmployee.clear();
         for (Employee employee:listEmployee){
             observableListEmployee.add(new EmployeeDTO(employee.getName(), employee.getEmail(), employee.getTotalIncome()));
         }

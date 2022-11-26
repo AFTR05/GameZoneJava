@@ -17,7 +17,7 @@ public class PersistenceEmployee {
     public void saveEmployee(HashSet<Employee> listEmployee) throws IOException {
         String contenido = "";
         for(Employee employee: listEmployee) {
-            contenido+= employee.getName()+"/"+employee.getEmail()+"/"+employee.getPassword()+"\n";
+            contenido+= employee.getName()+"/"+employee.getEmail()+"/"+employee.getPassword()+"/"+employee.getTotalIncome()+"\n";
         }
         ArchiveUtil.saveArchive(RUTE_ARCHIVE_EMPLOYEE, contenido, false);
     }
@@ -32,6 +32,7 @@ public class PersistenceEmployee {
             myEmployee.setName(line.split("/")[0]);
             myEmployee.setEmail(line.split("/")[1]);
             myEmployee.setPassword(line.split("/")[2]);
+            myEmployee.setTotalIncome(Double.parseDouble(line.split("/")[3]));
             employees.add(myEmployee);
         }
         return employees;

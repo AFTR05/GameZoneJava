@@ -96,7 +96,7 @@ public class AdminEmployeeViewController implements Initializable {
     void createEmployee(ActionEvent event) throws IOException{
         if (mfc.getArcade().getCloneValidator().verifySign(txtUsernameEmployeeAdmin.getText())&& mfc.getArcade().getEmptyValidator().validateEmpty3Space(txtUsernameEmployeeAdmin.getText(),txtEmailEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText()) && mfc.getArcade().getEmailValidator().verifyEmail(txtEmailEmployeeAdmin.getText())){
             mfc.createEmployee(txtUsernameEmployeeAdmin.getText(),txtEmailEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText());
-            mfc.getArcade().getAjustableData().employeeAjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
+            mfc.getArcade().getAjustableData().employeeAdjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
         }
 
     }
@@ -105,9 +105,14 @@ public class AdminEmployeeViewController implements Initializable {
     void deleteEmployee(ActionEvent event) throws IOException{
         if (mfc.getArcade().getSelectValidator().validatePerson(employeeSelected)){
             mfc.deleteEmployee(txtUsernameEmployeeAdmin.getText(),txtPasswordEmployeeAdmin.getText());
-            mfc.getArcade().getAjustableData().employeeAjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
+            mfc.getArcade().getAjustableData().employeeAdjust(employeeObservableList,txtUsernameEmployeeAdmin,txtEmailEmployeeAdmin,txtPasswordEmployeeAdmin,tableEmployeeAdmin);
         }
 
+    }
+
+    @FXML
+    void changeToAttractions(ActionEvent event)throws IOException {
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminAttractionView.fxml");
     }
 
     @FXML
@@ -121,21 +126,15 @@ public class AdminEmployeeViewController implements Initializable {
         mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminEmployeeView.fxml");
 
     }
-    @FXML
-    void changeToProfile(ActionEvent event) throws IOException{
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
-
-    }
-    @FXML
-    void changeToAttractions(ActionEvent event) {
-
-    }
-
-
-
 
     @FXML
     void changeToLoans(ActionEvent event) {
+
+    }
+
+    @FXML
+    void changeToProfile(ActionEvent event) throws IOException{
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
 
     }
 

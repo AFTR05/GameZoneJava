@@ -4,6 +4,10 @@ import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.service.impl.Arcade;
 
 import java.io.IOException;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ChargerData {
     private final Arcade arcade;
@@ -11,12 +15,56 @@ public class ChargerData {
         this.arcade=arcade;
     }
     public void chargeData(){
-        try {
-            arcade.getAdministratorService().setAdministrator(arcade.getPersistenceAdmin().chargeAdmin());
-            arcade.getClientService().setListClients(arcade.getPersistenceClient().chargeClient());
-            arcade.getEmployeeService().setListEmployee(arcade.getPersistenceEmployee().chargeEmployee());
-        }catch (IOException ioe){
+            ExecutorService service= Executors.newFixedThreadPool(4);
+            CyclicBarrier barrier=new CyclicBarrier(4);
+            chargeAdministrator(service);
+            chargeEmployees(service);
+            chargeClients(service);
+            chargeAttractions(service);
+            service.shutdown();
+    }
 
-        }
+    public void chargeAdministrator(ExecutorService service){
+        service.submit(()-> {
+            try {
+                arcade.getAdministratorService().setAdministrator(arcade.getPersistenceAdmin().chargeAdmin());
+                System.out.println(Thread.currentThread());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void chargeClients(ExecutorService service){
+        service.submit(()-> {
+            try {
+                arcade.getClientService().setListClients(arcade.getPersistenceClient().chargeClient());
+                System.out.println(Thread.currentThread());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void chargeEmployees(ExecutorService service){
+        service.submit(()-> {
+            try {
+                arcade.getEmployeeService().setListEmployee(arcade.getPersistenceEmployee().chargeEmployee());
+                System.out.println(Thread.currentThread());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void chargeAttractions(ExecutorService service){
+        service.submit(()-> {
+            try {
+                arcade.getAttractionService().setAttractions(arcade.getPersistenceAttraction().chargeAttractions());
+                System.out.println(Thread.currentThread());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }

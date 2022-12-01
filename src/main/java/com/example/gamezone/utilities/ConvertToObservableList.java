@@ -1,8 +1,10 @@
 package com.example.gamezone.utilities;
 
+import com.example.gamezone.DTOs.AttractionDTO;
 import com.example.gamezone.DTOs.ClientDTO;
 import com.example.gamezone.DTOs.EmployeeDTO;
 import com.example.gamezone.controller.ModelFactoryController;
+import com.example.gamezone.model.Attraction;
 import com.example.gamezone.model.Client;
 import com.example.gamezone.model.Employee;
 import com.example.gamezone.model.Person;
@@ -19,6 +21,13 @@ public class ConvertToObservableList {
         return observableListClient;
     }
 
+    public ObservableList<AttractionDTO> attractionsObservableList(HashSet<Attraction> listAttraction, ObservableList<AttractionDTO> attractionsObservable){
+        attractionsObservable.clear();
+        for (Attraction attraction:listAttraction){
+            attractionsObservable.add(new AttractionDTO(attraction.getName(),attraction.getCode(),attraction.getTypeAttraction().getCategory(),attraction.getPrice()));
+        }
+        return attractionsObservable;
+    }
     public ObservableList<Employee> EmployeeObservableList(HashSet<Employee> listPeople,ObservableList<Employee> observableListPeople){
         observableListPeople= FXCollections.observableArrayList(listPeople);
         return observableListPeople;

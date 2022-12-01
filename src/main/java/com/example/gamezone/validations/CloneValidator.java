@@ -1,5 +1,6 @@
 package com.example.gamezone.validations;
 
+import com.example.gamezone.DTOs.AttractionDTO;
 import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.exceptions.CloneException;
 import com.example.gamezone.model.Client;
@@ -37,7 +38,32 @@ public class CloneValidator {
                 return false;
             }
         }
+    }
 
+    public Boolean verifyCode(String code){
+        if (arcade.getVerificatorClone().verifyCode(code,arcade.getAttractionService().getAttractions())){
+            return true;
+        }else {
+            try {
+                throw new CloneException("The code already exists");
+            }catch (CloneException ce){
+                arcade.getAlertGenerator().alertError(ce.getMessage(),"Code fail");
+                return false;
+            }
+        }
+    }
+
+    public Boolean verifyCodeWithSelection(String code, AttractionDTO attractionDTO){
+        if (arcade.getVerificatorClone().verifyCodeWithSelection(code,arcade.getAttractionService().getAttractions(), attractionDTO)){
+            return true;
+        }else {
+            try {
+                throw new CloneException("The code already exists");
+            }catch (CloneException ce){
+                arcade.getAlertGenerator().alertError(ce.getMessage(),"Code fail");
+                return false;
+            }
+        }
     }
 
 

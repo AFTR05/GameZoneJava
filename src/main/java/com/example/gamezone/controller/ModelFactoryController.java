@@ -1,5 +1,7 @@
 package com.example.gamezone.controller;
 
+import com.example.gamezone.DTOs.AttractionDTO;
+import com.example.gamezone.model.TypeAttraction;
 import com.example.gamezone.service.ModelFactoryService;
 import com.example.gamezone.service.impl.Arcade;
 
@@ -44,5 +46,20 @@ public class ModelFactoryController implements ModelFactoryService {
     @Override
     public void deleteEmployee(String name, String password) {
         arcade.getEmployeeService().deletePerson(name,password);
+    }
+
+    @Override
+    public void createAttraction(String name, String code, Double price, TypeAttraction type) {
+        arcade.getAttractionService().createAttraction(name, code, price, type);
+    }
+
+    @Override
+    public void deleteAttraction(String name, String code, Double price, TypeAttraction type) {
+        arcade.getAttractionService().deleteAttraction(name, code, price, type);
+    }
+
+    @Override
+    public void updateAttraction(String name, String code, Double price, TypeAttraction type, AttractionDTO attractionSelected) {
+        arcade.getAttractionService().updateAttraction(name, code, price, type, attractionSelected);
     }
 }

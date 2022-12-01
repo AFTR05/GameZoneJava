@@ -5,12 +5,14 @@ import com.example.gamezone.controller.AdminProfileViewController;
 import com.example.gamezone.controller.ClientProfileViewController;
 import com.example.gamezone.controller.EmployeeProfileViewController;
 import com.example.gamezone.persistence.PersistenceAdmin;
+import com.example.gamezone.persistence.PersistenceAttraction;
 import com.example.gamezone.persistence.PersistenceClient;
 import com.example.gamezone.persistence.PersistenceEmployee;
 import com.example.gamezone.utilities.*;
 import com.example.gamezone.validations.*;
 
 public class Arcade {
+    private final PersistenceAttraction persistenceAttraction;
     private final PreparatorTable preparatorTable;
     private final ShowInputs showInputs;
     private final PersistenceAdmin persistenceAdmin;
@@ -37,14 +39,20 @@ public class Arcade {
     private final ConvertToObservableList convertToObservableList;
     private final DeleteInfoInputs deleteInfoInputs;
     private final SelectValidator selectValidator;
-    private final AjustableData ajustableData;
+    private final AdjustableData adjustableData;
     private final AdminModalEmployeeSalaryViewController adminModalEmployeeSalaryViewController;
     private final SalaryValidation salaryValidation;
-
+    private final ComboBoxAdder comboBoxAdder;
+    private final PriceValidator priceValidator;
+    private final TypeConverter typeConverter;
     public Arcade() {
+        this.priceValidator=new PriceValidator(this);
+        this.typeConverter=new TypeConverter();
+        this.comboBoxAdder=new ComboBoxAdder();
+        this.persistenceAttraction=new PersistenceAttraction(this);
         this.salaryValidation=new SalaryValidation(this);
         this.adminModalEmployeeSalaryViewController=new AdminModalEmployeeSalaryViewController();
-        this.ajustableData=new AjustableData(this);
+        this.adjustableData =new AdjustableData(this);
         this.selectValidator=new SelectValidator(this);
         this.deleteInfoInputs=new DeleteInfoInputs();
         this.preparatorTable=new PreparatorTable();
@@ -63,7 +71,7 @@ public class Arcade {
         this.persistenceAdmin=new PersistenceAdmin();
         this.persistenceEmployee=new PersistenceEmployee();
         this.administratorService = new AdministratorServiceImpl(this);
-        this.attractionService = new AttractionServiceImpl();
+        this.attractionService = new AttractionServiceImpl(this);
         this.clientService = new ClientServiceImpl(this);
         this.employeeService = new EmployeeServiceImpl(this);
         this.loanService = new LoanServiceImpl();
@@ -71,6 +79,23 @@ public class Arcade {
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction(this);
+    }
+
+    public PriceValidator getPriceValidator() {
+        return priceValidator;
+    }
+
+    public TypeConverter getTypeConverter() {
+        return typeConverter;
+    }
+
+    public ComboBoxAdder getComboBoxAdder() {
+        return comboBoxAdder;
+    }
+
+
+    public PersistenceAttraction getPersistenceAttraction() {
+        return persistenceAttraction;
     }
 
     public SalaryValidation getSalaryValidation() {
@@ -81,8 +106,8 @@ public class Arcade {
         return adminModalEmployeeSalaryViewController;
     }
 
-    public AjustableData getAjustableData() {
-        return ajustableData;
+    public AdjustableData getAjustableData() {
+        return adjustableData;
     }
 
     public SelectValidator getSelectValidator() {

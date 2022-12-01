@@ -72,6 +72,11 @@ public class AdminProfileViewController implements Initializable {
     }
 
     @FXML
+    void changeToAttractions(ActionEvent event)throws IOException {
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminAttractionView.fxml");
+    }
+
+    @FXML
     void changeToClients(ActionEvent event) throws IOException {
         mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminClientView.fxml");
 
@@ -82,11 +87,6 @@ public class AdminProfileViewController implements Initializable {
         mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminEmployeeView.fxml");
 
     }
-    @FXML
-    void changeToProfile(ActionEvent event) throws IOException{
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
-
-    }
 
     @FXML
     void changeToLoans(ActionEvent event) {
@@ -94,7 +94,8 @@ public class AdminProfileViewController implements Initializable {
     }
 
     @FXML
-    void changeToAttractions(ActionEvent event) {
+    void changeToProfile(ActionEvent event) throws IOException{
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
 
     }
 }

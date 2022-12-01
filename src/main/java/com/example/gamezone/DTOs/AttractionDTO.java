@@ -1,29 +1,16 @@
-package com.example.gamezone.model;
+package com.example.gamezone.DTOs;
 
-public class Attraction {
+public class AttractionDTO {
     private String name;
     private String code;
+    private String category;
     private Double price;
-    private TypeAttraction typeAttraction;
 
-
-    public TypeAttraction getTypeAttraction() {
-        return typeAttraction;
-    }
-
-    public void setTypeAttraction(TypeAttraction typeAttraction) {
-        this.typeAttraction = typeAttraction;
-    }
-
-    public Attraction(String name, String code, Double price, TypeAttraction typeAttraction) {
+    public AttractionDTO(String name, String code, String category, Double price) {
         this.name = name;
+        this.code = code;
+        this.category = category;
         this.price = price;
-        this.code=code;
-        this.typeAttraction=typeAttraction;
-    }
-
-    public Attraction(){
-        super();
     }
 
     public String getName() {
@@ -40,6 +27,14 @@ public class Attraction {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public Double getPrice() {

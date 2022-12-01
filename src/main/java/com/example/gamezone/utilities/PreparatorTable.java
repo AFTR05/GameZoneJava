@@ -24,6 +24,13 @@ public class PreparatorTable {
         tableSalaryColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
     }
 
+    public void preparateTableAttraction(TableColumn tableNameColumn, TableColumn tableCodeColumn,TableColumn tableTypeColumn, TableColumn tablePriceColumn){
+        tableNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableCodeColumn.setCellValueFactory(new PropertyValueFactory<>("code"));
+        tableTypeColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
+        tablePriceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+    }
+
     public void refreshTable(ObservableList observableList, TableView tableView){
         tableView.setItems(observableList);
         tableView.refresh();

@@ -56,8 +56,8 @@ public class AdminClientViewController implements Initializable {
 
 
     @FXML
-    void changeToAttractions(ActionEvent event) {
-
+    void changeToAttractions(ActionEvent event)throws IOException {
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminAttractionView.fxml");
     }
 
     @FXML

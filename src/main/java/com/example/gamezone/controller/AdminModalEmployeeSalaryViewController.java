@@ -81,7 +81,7 @@ public class AdminModalEmployeeSalaryViewController implements Initializable {
     void changeSalary(ActionEvent event) throws IOException {
         if (mfc.getArcade().getSelectValidator().validateEmployeeDTO(employeeDTOSelected) && mfc.getArcade().getSalaryValidation().numberValidation(txtSalaryModalEmployee.getText())){
             mfc.getArcade().getUpdaterObject().employeeUpdate(mfc.getArcade().getSercherObject().getEmployee(txtUsernameModalEmployee.getText(),txtEmailModalEmployee.getText(),mfc.getArcade().getEmployeeService().getListEmployee()),txtUsernameModalEmployee.getText(),txtEmailModalEmployee.getText(),Double.parseDouble(txtSalaryModalEmployee.getText()));
-            mfc.getArcade().getAjustableData().employeeDTOAjust(employeeObservableList,txtSalaryModalEmployee,txtUsernameModalEmployee,txtEmailModalEmployee,tableModelEmployeeSalary);
+            mfc.getArcade().getAjustableData().employeeDTOAdjust(employeeObservableList,txtSalaryModalEmployee,txtUsernameModalEmployee,txtEmailModalEmployee,tableModelEmployeeSalary);
         }
     }
 

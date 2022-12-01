@@ -1,5 +1,6 @@
 package com.example.gamezone.utilities;
 
+import com.example.gamezone.model.Attraction;
 import com.example.gamezone.model.Client;
 import com.example.gamezone.model.Employee;
 import com.example.gamezone.model.Person;
@@ -24,5 +25,13 @@ public class SercherObject {
         return null;
     }
 
+    public Attraction getAttraction(String code, HashSet<Attraction> listAttraction){
+        for (Attraction attraction:listAttraction){
+            if (attraction.getCode().equals(code)){
+                return attraction;
+            }
+        }
+        return null;
+    }
 
 }

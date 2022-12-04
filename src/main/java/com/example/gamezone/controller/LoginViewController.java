@@ -45,6 +45,8 @@ public class LoginViewController implements Initializable {
             switch (mfc.getArcade().getLoginAction().DefaultLogin(usernameLoginTxt.getText(),passwordLoginTxt.getText())){
                 case "client":
                     CompletableFuture.runAsync(()->mfc.getArcade().getClientViewController().setMeClient((Client) mfc.getArcade().getSercherObject().getPerson(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc.getArcade().getClientService().getListClients())));
+                    CompletableFuture.runAsync(()->mfc.getArcade().getClientLoanModalViewController().setMeClient((Client) mfc.getArcade().getSercherObject().getPerson(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc.getArcade().getClientService().getListClients())));
+                    CompletableFuture.runAsync(()->mfc.getArcade().getClientLoanViewController().setMeClient((Client) mfc.getArcade().getSercherObject().getPerson(usernameLoginTxt.getText(),passwordLoginTxt.getText(),mfc.getArcade().getClientService().getListClients())));
                     mfc.getArcade().getChangerFXML().sceneChange(event,"view/Client/ClientProfileView.fxml");
                     break;
                 case "employee":

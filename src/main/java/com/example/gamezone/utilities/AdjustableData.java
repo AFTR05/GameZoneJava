@@ -34,4 +34,8 @@ public class AdjustableData {
         arcade.getPreparatorTable().refreshTable(attractionObservableList,tableAttraction);
         arcade.getDeleteInfoInputs().deleteWithComboBox(txtCodeAttraction,txtNameAttraction,txtPriceAttraction,cbTypeAttraction);
     }
+
+    public void loanAdjust() throws IOException {
+        arcade.getPersistenceLoan().saveEmployee(arcade.getLoanService().getListLoans());
+    }
 }

@@ -1,9 +1,13 @@
 package com.example.gamezone.controller;
 
 import com.example.gamezone.DTOs.AttractionDTO;
+import com.example.gamezone.model.Attraction;
+import com.example.gamezone.model.Client;
 import com.example.gamezone.model.TypeAttraction;
 import com.example.gamezone.service.ModelFactoryService;
 import com.example.gamezone.service.impl.Arcade;
+
+import java.time.LocalDateTime;
 
 public class ModelFactoryController implements ModelFactoryService {
 
@@ -28,6 +32,11 @@ public class ModelFactoryController implements ModelFactoryService {
 
     public ModelFactoryController() {
         arcade = new Arcade();
+    }
+
+    @Override
+    public void createLoan(LocalDateTime beginDate, LocalDateTime endDate, Client client, Attraction attraction) {
+        arcade.getLoanService().createLoan(beginDate, endDate, client, attraction);
     }
 
     @Override

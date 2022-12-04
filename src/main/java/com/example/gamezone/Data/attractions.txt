@@ -1,4 +1,6 @@
-PlayStation2/A4/500.0/Console
-Xbox360/A3/1000.0/Console
+Alienware/B2/1500.0/PC
 PlayStation3/A2/1000.0/Console
 Wii/A1/800.0/Console
+Ping pong/D1/500.0/Other
+Monopoli/C1/500.0/Board game
+Asus/B1/1200.0/PC

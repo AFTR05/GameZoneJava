@@ -2,6 +2,7 @@ package com.example.gamezone.validations;
 
 import com.example.gamezone.DTOs.AttractionDTO;
 import com.example.gamezone.DTOs.EmployeeDTO;
+import com.example.gamezone.DTOs.LoanDTO;
 import com.example.gamezone.controller.ModelFactoryController;
 import com.example.gamezone.model.Attraction;
 import com.example.gamezone.model.Person;
@@ -17,7 +18,22 @@ public class SelectValidator {
             arcade.getAlertGenerator().alertError("The person is not selected","No selection");
             return false;
         }else return true;
+    }
 
+
+    public Boolean validateAttraction(Attraction attraction){
+        if (attraction==null){
+            arcade.getAlertGenerator().alertError("The attraction is not selected","No selection");
+            return false;
+        }else return true;
+    }
+
+
+    public Boolean validateLoanDTO(LoanDTO loanDTOSelected){
+        if (loanDTOSelected==null){
+            arcade.getAlertGenerator().alertError("The schedule is not selected","No selection");
+            return false;
+        }else return true;
     }
 
     public Boolean validateEmployeeDTO(EmployeeDTO employeeDTOSelected){

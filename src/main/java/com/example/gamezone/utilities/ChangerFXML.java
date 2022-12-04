@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -16,6 +17,10 @@ public class ChangerFXML {
     private Scene scene;
     private Parent root;
 
+    public void closeModalWindow(Button button){
+        Stage stage=(Stage) button.getScene().getWindow();
+        stage.close();
+    }
     public void modalChange(String rute) throws IOException {
         root= FXMLLoader.load(Application.class.getResource(rute));
         stage=new Stage();

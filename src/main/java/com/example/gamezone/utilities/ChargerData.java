@@ -15,12 +15,13 @@ public class ChargerData {
         this.arcade=arcade;
     }
     public void chargeData(){
-            ExecutorService service= Executors.newFixedThreadPool(4);
-            CyclicBarrier barrier=new CyclicBarrier(4);
+            ExecutorService service= Executors.newFixedThreadPool(5);
+            CyclicBarrier barrier=new CyclicBarrier(5);
             chargeAdministrator(service);
             chargeEmployees(service);
             chargeClients(service);
             chargeAttractions(service);
+            chargeLoans(service);
             service.shutdown();
     }
 
@@ -28,7 +29,7 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getAdministratorService().setAdministrator(arcade.getPersistenceAdmin().chargeAdmin());
-                System.out.println(Thread.currentThread());
+                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -39,7 +40,7 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getClientService().setListClients(arcade.getPersistenceClient().chargeClient());
-                System.out.println(Thread.currentThread());
+                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -50,7 +51,7 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getEmployeeService().setListEmployee(arcade.getPersistenceEmployee().chargeEmployee());
-                System.out.println(Thread.currentThread());
+                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -61,7 +62,18 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getAttractionService().setAttractions(arcade.getPersistenceAttraction().chargeAttractions());
-                System.out.println(Thread.currentThread());
+                System.out.println(Thread.currentThread().getName());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void chargeLoans(ExecutorService service){
+        service.submit(()-> {
+            try {
+                arcade.getLoanService().setListLoans(arcade.getPersistenceLoan().chargeLoan());
+                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

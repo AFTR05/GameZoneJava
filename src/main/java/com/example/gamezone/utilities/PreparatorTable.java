@@ -12,6 +12,12 @@ public class PreparatorTable {
         tableAmountColumn.setCellValueFactory(new PropertyValueFactory<>("amountLoan"));
     }
 
+    public void prepareTableLoan(TableColumn tableBeginColumn, TableColumn tableEndColumn, TableColumn tableNameColumn){
+        tableNameColumn.setCellValueFactory(new PropertyValueFactory<>("nameAttraction"));
+        tableBeginColumn.setCellValueFactory(new PropertyValueFactory<>("beginHour"));
+        tableEndColumn.setCellValueFactory(new PropertyValueFactory<>("endHour"));
+    }
+
     public void prepareTablePerson(TableColumn tableNameColumn, TableColumn tableEmailColumn, TableColumn tablePasswordColumn){
         tableNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         tableEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));

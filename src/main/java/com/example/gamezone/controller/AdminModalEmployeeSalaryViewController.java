@@ -33,7 +33,6 @@ public class AdminModalEmployeeSalaryViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        mfc.getArcade().getChargerData();
         mfc.getArcade().getConvertToObservableList().EmployeeDTObservableList(mfc.getArcade().getEmployeeService().getListEmployee(),employeeObservableList);
         mfc.getArcade().getChargerData().chargeData();
         mfc.getArcade().getPreparatorTable().prepareTableEmployeeDTO(columnUsernameModalEmployeeSalary,columnEmailModalEmployeeSalary,columnSalaryModalEmployeeSalary);

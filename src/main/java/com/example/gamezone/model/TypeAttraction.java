@@ -1,7 +1,7 @@
 package com.example.gamezone.model;
 
 public enum TypeAttraction {
-    CONSOLE("Console","@../../images/console.png","A"),PC("PC","@../../images/pc.png","B"),BOARDGAME("Board game","@../../images/boardGame.png","C"),OTHER("Other","@../../images/others.png","D");
+    CONSOLE("Console","src/main/resources/com/example/gamezone/images/console.png","A"),PC("PC","src/main/resources/com/example/gamezone/images/pc.png","B"),BOARDGAME("Board game","src/main/resources/com/example/gamezone/images/boardGame.png","C"),OTHER("Other","src/main/resources/com/example/gamezone/images/others.png","D");
 
     private String category;
     private String image;

@@ -2,6 +2,7 @@ package com.example.gamezone.utilities;
 
 import com.example.gamezone.DTOs.AttractionDTO;
 import com.example.gamezone.DTOs.EmployeeDTO;
+import com.example.gamezone.DTOs.LoanDTO;
 import com.example.gamezone.model.Attraction;
 import com.example.gamezone.model.Employee;
 import com.example.gamezone.model.Person;
@@ -10,6 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class ShowInputs {
+    public void showLoanDTOModal(Text textNameClient, Text textBegin, Text textEnd, LoanDTO loanDTO){
+        textBegin.setText(loanDTO.getBeginHour());
+        textEnd.setText(loanDTO.getEndHour());
+        textNameClient.setText(loanDTO.getNameAttraction());
+    }
     public void showInProfile(TextField textFieldName, TextField textFieldEmail, TextField textFieldPassword, Person person){
         textFieldName.setText(person.getName());
         textFieldEmail.setText(person.getEmail());

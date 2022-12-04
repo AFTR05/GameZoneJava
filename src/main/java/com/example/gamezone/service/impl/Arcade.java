@@ -1,13 +1,7 @@
 package com.example.gamezone.service.impl;
 
-import com.example.gamezone.controller.AdminModalEmployeeSalaryViewController;
-import com.example.gamezone.controller.AdminProfileViewController;
-import com.example.gamezone.controller.ClientProfileViewController;
-import com.example.gamezone.controller.EmployeeProfileViewController;
-import com.example.gamezone.persistence.PersistenceAdmin;
-import com.example.gamezone.persistence.PersistenceAttraction;
-import com.example.gamezone.persistence.PersistenceClient;
-import com.example.gamezone.persistence.PersistenceEmployee;
+import com.example.gamezone.controller.*;
+import com.example.gamezone.persistence.*;
 import com.example.gamezone.utilities.*;
 import com.example.gamezone.validations.*;
 
@@ -26,6 +20,7 @@ public class Arcade {
     private final SercherObject sercherObject;
     private final LoginAction loginAction;
     private final PersistenceEmployee persistenceEmployee;
+    private final PersistenceLoan persistenceLoan;
     private final AdminProfileViewController adminViewController;
     private final ClientProfileViewController clientViewController;
     private final EmployeeProfileViewController employeeViewController;
@@ -45,7 +40,22 @@ public class Arcade {
     private final ComboBoxAdder comboBoxAdder;
     private final PriceValidator priceValidator;
     private final TypeConverter typeConverter;
+    private final DinamicCreator dinamicCreator;
+    private final TimeConverter timeConverter;
+    private final FilterTimeLister filterTimeLister;
+    private final ClientLoanModalViewController clientLoanModalViewController;
+    private final ClientLoanViewController clientLoanViewController;
+    private final TimeComparator timeComparator;
+    private final TimeValidator timeValidator;
     public Arcade() {
+        this.timeComparator=new TimeComparator();
+        this.timeValidator=new TimeValidator(this);
+        this.clientLoanViewController=new ClientLoanViewController();
+        this.clientLoanModalViewController=new ClientLoanModalViewController();
+        this.filterTimeLister=new FilterTimeLister(this);
+        this.timeConverter=new TimeConverter();
+        this.persistenceLoan=new PersistenceLoan(this);
+        this.dinamicCreator=new DinamicCreator();
         this.priceValidator=new PriceValidator(this);
         this.typeConverter=new TypeConverter();
         this.comboBoxAdder=new ComboBoxAdder();
@@ -56,7 +66,7 @@ public class Arcade {
         this.selectValidator=new SelectValidator(this);
         this.deleteInfoInputs=new DeleteInfoInputs();
         this.preparatorTable=new PreparatorTable();
-        this.convertToObservableList=new ConvertToObservableList();
+        this.convertToObservableList=new ConvertToObservableList(this);
         this.emailValidator=new EmailValidator(this);
         this.updaterObject=new UpdaterObject();
         this.cloneValidator=new CloneValidator(this);
@@ -74,11 +84,47 @@ public class Arcade {
         this.attractionService = new AttractionServiceImpl(this);
         this.clientService = new ClientServiceImpl(this);
         this.employeeService = new EmployeeServiceImpl(this);
-        this.loanService = new LoanServiceImpl();
+        this.loanService = new LoanServiceImpl(this);
         this.persistenceClient=new PersistenceClient();
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction(this);
+    }
+
+    public TimeComparator getTimeComparator() {
+        return timeComparator;
+    }
+
+    public TimeValidator getTimeValidator() {
+        return timeValidator;
+    }
+
+    public ClientLoanViewController getClientLoanViewController() {
+        return clientLoanViewController;
+    }
+
+    public ClientLoanModalViewController getClientLoanModalViewController() {
+        return clientLoanModalViewController;
+    }
+
+    public FilterTimeLister getFilterTimeLister() {
+        return filterTimeLister;
+    }
+
+    public TimeConverter getTimeConverter() {
+        return timeConverter;
+    }
+
+    public PersistenceLoan getPersistenceLoan() {
+        return persistenceLoan;
+    }
+
+    public AdjustableData getAdjustableData() {
+        return adjustableData;
+    }
+
+    public DinamicCreator getDinamicCreator() {
+        return dinamicCreator;
     }
 
     public PriceValidator getPriceValidator() {

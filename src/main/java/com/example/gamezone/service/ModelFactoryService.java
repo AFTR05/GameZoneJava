@@ -2,9 +2,14 @@ package com.example.gamezone.service;
 
 import com.example.gamezone.DTOs.AttractionDTO;
 import com.example.gamezone.controller.ModelFactoryController;
+import com.example.gamezone.model.Attraction;
+import com.example.gamezone.model.Client;
 import com.example.gamezone.model.TypeAttraction;
 
+import java.time.LocalDateTime;
+
 public interface ModelFactoryService {
+    void createLoan(LocalDateTime beginDate, LocalDateTime endDate, Client client, Attraction attraction);
     void createClient(String name,String email,String password);
     void createEmployee(String name,String email,String password);
     void createAdmin(String name,String email,String password);

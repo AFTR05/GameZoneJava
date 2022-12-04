@@ -95,15 +95,17 @@ public class AdminAttractionViewController implements Initializable {
     }
 
     @FXML
-    void changeToLoans(ActionEvent event) {
-
+    void changeToLoans(ActionEvent event) throws IOException {
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminLoanView.fxml");
     }
 
     @FXML
     void changeToProfile(ActionEvent event) throws IOException{
         mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
-
     }
+
+
+
     @FXML
     void createAttraction(ActionEvent event) throws IOException{
         if (mfc.getArcade().getCloneValidator().verifyCode(txtCodeAttractionAdmin.getText())&&mfc.getArcade().getEmptyValidator().validateEmpty4Space(txtNameAttractionAdmin.getText(),txtCodeAttractionAdmin.getText(),txtPriceAttractionAdmin.getText(),cbTypeAttractionAdmin.getValue())&&mfc.getArcade().getPriceValidator().validatePrice(txtPriceAttractionAdmin.getText())) {

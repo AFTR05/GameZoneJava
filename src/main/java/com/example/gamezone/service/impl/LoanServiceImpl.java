@@ -15,7 +15,8 @@ public class LoanServiceImpl implements LoanService {
     @Override
     public void createLoan(LocalDateTime beginDate, LocalDateTime endDate, Client client, Attraction attraction) {
         listLoans.add(new Loan(beginDate,endDate,client,attraction));
-        client.setAmountLoan(client.getAmountLoan()+1);
+        Client client1=arcade.getSercherObject().getClient(client.getName(),client.getPassword(),arcade.getClientService().getListClients());
+        client1.setAmountLoan(client1.getAmountLoan()+1);
         arcade.getAlertGenerator().alertInformation("The loan cost is $"+attraction.getPrice(),"Success");
     }
 

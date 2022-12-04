@@ -4,47 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Solo falta loan">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/DTOs/LoanDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/loans.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanModalViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/exceptions/TimeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/persistence/PersistenceLoan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/DinamicCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/FilterTimeLister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/TimeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/TimeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/TimeValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanModalView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanView.fxml" afterDir="false" />
+    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Loan client listo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminLoanModalViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminLoanViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeLoanViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanModalView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeLoanView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/attractions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/attractions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/clients.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/clients.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminModalEmployeeSalaryViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminModalEmployeeSalaryViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientProfileViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientProfileViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/LoginViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ModelFactoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ModelFactoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/Loan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/TypeAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/model/TypeAttraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/LoanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/ModelFactoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/ModelFactoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/loans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/loans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminAttractionViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminAttractionViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminClientViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminClientViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminEmployeeViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminEmployeeViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminProfileViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminProfileViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanModalViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanModalViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/Arcade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/LoanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/service/impl/LoanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/AdjustableData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/AdjustableData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChangerFXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChangerFXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChargerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChargerData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ConvertToObservableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ConvertToObservableList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/PreparatorTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/PreparatorTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/SercherObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ShowInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ShowInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/SelectValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/SelectValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/boardGame.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/boardGame.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/console.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/console.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/others.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/others.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/pc.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/pc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/DinamicCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/DinamicCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669919847696</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Loan client listo">
+      <created>1670121873449</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670121873449</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +238,8 @@
     <MESSAGE value="Practica" />
     <MESSAGE value="Funcionalidad de admin: Empleados, Clientes y profile listo" />
     <MESSAGE value="Solo falta loan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solo falta loan" />
+    <MESSAGE value="Loan client listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loan client listo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -320,16 +308,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/validations/TimeValidator.java</url>
           <line>30</line>
           <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanViewController.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanViewController.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="140" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

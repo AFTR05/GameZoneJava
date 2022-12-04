@@ -6,6 +6,7 @@ import com.example.gamezone.utilities.*;
 import com.example.gamezone.validations.*;
 
 public class Arcade {
+    private final AdminLoanModalViewController adminLoanModalViewController;
     private final PersistenceAttraction persistenceAttraction;
     private final PreparatorTable preparatorTable;
     private final ShowInputs showInputs;
@@ -48,6 +49,7 @@ public class Arcade {
     private final TimeComparator timeComparator;
     private final TimeValidator timeValidator;
     public Arcade() {
+        this.adminLoanModalViewController=new AdminLoanModalViewController();
         this.timeComparator=new TimeComparator();
         this.timeValidator=new TimeValidator(this);
         this.clientLoanViewController=new ClientLoanViewController();
@@ -89,6 +91,10 @@ public class Arcade {
         this.changerFXML=new ChangerFXML();
         this.sercherObject=new SercherObject();
         this.loginAction=new LoginAction(this);
+    }
+
+    public AdminLoanModalViewController getAdminLoanModalViewController() {
+        return adminLoanModalViewController;
     }
 
     public TimeComparator getTimeComparator() {

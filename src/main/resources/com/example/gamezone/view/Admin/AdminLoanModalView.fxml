@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #072330;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminLoanModalViewController">
+    <children>
+        <TableView fx:id="tableModelClientSchedule" layoutX="86.0" layoutY="106.0" prefHeight="266.0" prefWidth="450.0">
+            <columns>
+                <TableColumn fx:id="columnBeginHourLoan" prefWidth="150.0" text="Begin hour" />
+                <TableColumn fx:id="columnEndHourLoan" prefWidth="150.0" text="End hour" />
+                <TableColumn fx:id="columnAttractionLoan" prefWidth="150.0" text="Attraction" />
+            </columns>
+        </TableView>
+        <Text fill="WHITE" layoutX="131.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule" textAlignment="CENTER" wrappingWidth="367.62542724609375">
+            <font>
+                <Font name="Arial Black" size="22.0" />
+            </font>
+        </Text>
+        <Separator layoutX="7.0" layoutY="90.0" opacity="0.2" prefHeight="6.0" prefWidth="609.0" />
+    </children>
+</AnchorPane>

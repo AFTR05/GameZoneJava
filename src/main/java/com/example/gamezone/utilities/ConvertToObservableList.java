@@ -51,6 +51,20 @@ public class ConvertToObservableList {
         return loanDTOS;
     }
 
+    public ObservableList<LoanDTO> loanDTOEmpObservable(Attraction attraction, ObservableList<LoanDTO> loanDTOS , LocalDate date,ArrayList<Loan> listLoan){
+        ArrayList<Loan> filterLoans=arcade.getFilterTimeLister().limitAll(listLoan,attraction,date.toString());
+        if (filterLoans!=null){
+            for (int x=0;x<filterLoans.size();x++){
+                if (Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>x && date.isEqual(LocalDate.now())){
+                    continue;
+                }else {
+                    loanDTOS.add(new LoanDTO(arcade.getTimeConverter().localDateTimeToHour(filterLoans.get(x).getBeginDate()),arcade.getTimeConverter().localDateTimeToHour(filterLoans.get(x).getEndDate()),filterLoans.get(x).getAttraction().getName(),filterLoans.get(x).getAttraction().getCode()));
+                }
+            }
+        }
+        return loanDTOS;
+    }
+
     public ObservableList<ClientDTO> clientDTObservable(HashSet<Client> listclient,ObservableList<ClientDTO> observableListClient){
         for (Client client : listclient) {
             observableListClient.add(new ClientDTO(client.getName(),client.getAmountLoan(),client.getEmail()));

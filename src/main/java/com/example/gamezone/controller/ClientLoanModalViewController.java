@@ -39,11 +39,11 @@ public class ClientLoanModalViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         selectAttraction=mfc.getArcade().getClientLoanModalViewController().getSelectAttraction();
         dateSelected=mfc.getArcade().getClientLoanModalViewController().getDateSelected();
         mfc.getArcade().getConvertToObservableList().loanDTOObservable(selectAttraction,observableListLoanDTO,dateSelected);
         mfc.getArcade().getConvertToObservableList().loanDTOLoanObservable(selectAttraction,observableListLoanDTO,dateSelected,mfc.getArcade().getLoanService().getListLoans());
-        mfc.getArcade().getChargerData().chargeData();
         mfc.getArcade().getPreparatorTable().prepareTableLoan(columnBeginHourLoanClient,columnEndHourLoanClient,columnAttractionLoanClient);
         tableModelClientSchedule.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             loanDTOSelected =newSelection;

@@ -49,6 +49,33 @@ public class DinamicCreator {
         return button;
     }
 
+    public Button createButtonEmp(Attraction attraction, DatePicker datePicker, ModelFactoryController mfc){
+        File file=new File(attraction.getTypeAttraction().getImage());
+        ImageView imageView=new ImageView(new Image(file.toURI().toString()));
+        Button button=new Button();
+        button.setPrefHeight(70);
+        button.setPrefWidth(70);
+        button.setCursor(Cursor.HAND);
+        button.setId(attraction.getCode());
+        button.setOnAction(event -> {
+            try {
+                if (mfc.getArcade().getTimeValidator().validateDatePicker(datePicker)){
+                    mfc.getArcade().getAdminLoanModalViewController().setMfc(mfc);
+                    mfc.getArcade().getAdminLoanModalViewController().setSelectAttraction(mfc.getArcade().getSercherObject().getAttraction(button.getId(),mfc.getArcade().getAttractionService().getAttractions()));
+                    mfc.getArcade().getAdminLoanModalViewController().setDateSelected(datePicker.getValue());
+                    mfc.getArcade().getChangerFXML().modalChange("view/Admin/AdminLoanModalView.fxml");
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        imageView.prefHeight(53);
+        imageView.prefWidth(42);
+        button.setStyle("-fx-background-color: transparent;");
+        button.setGraphic(imageView);
+        return button;
+    }
+
     public VBox createVbox(){
         VBox vBox=new VBox();
         vBox.setPrefHeight(80);
@@ -96,4 +123,27 @@ public class DinamicCreator {
             vBoxPrincipal.getChildren().add(hBox);
         }
     }
+
+    public void putOnDataAttractionEmp(HashSet<Attraction> attractionsHash, VBox vBoxPrincipal,DatePicker datePicker,ModelFactoryController mfc){
+        ArrayList<Attraction> attractions=new ArrayList<Attraction>(attractionsHash);
+        int x=0;
+        while (x<attractions.size()){
+            HBox hBox=createHbox();
+            individual:for (int y=0;y<5;y++){
+                VBox vBox=createVbox();
+                vBox.getChildren().add(createTextName(attractions.get(x)));
+                vBox.getChildren().add(createButtonEmp(attractions.get(x),datePicker,mfc));
+                vBox.getChildren().add(createTextPrice(attractions.get(x)));
+                hBox.getChildren().add(vBox);
+                x++;
+                if (x==attractions.size()){
+                    break individual;
+                }
+            }
+            vBoxPrincipal.getChildren().add(hBox);
+        }
+    }
+
+
+
 }

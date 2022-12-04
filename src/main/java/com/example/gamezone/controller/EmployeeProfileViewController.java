@@ -67,12 +67,12 @@ public class EmployeeProfileViewController implements Initializable {
 
     @FXML
     void changeToLoans(ActionEvent event) throws IOException {
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminLoanView.fxml");
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Employee/EmployeeLoanView.fxml");
     }
 
     @FXML
     void changeToProfile(ActionEvent event) throws IOException{
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Employee/EmployeeProfileView.fxml");
     }
 
 }

@@ -1,24 +1,82 @@
-/********************************************
-*                                           *
-*       Button & Default-Button             *
-*                                           *
-*********************************************/
+.table-cell {
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color:  #072330;
+    -fx-border-width:0 0 0 0;
+    -fx-box-border: transparent transparent;
+    -fx-font: 13px "Segoe UI";
+    -fx-border-insets: 0;
+}
+
+
+
+
+
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color:  transparent;
+}
+
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width:0 0 0 0;
+}
+
+
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #a9aeb0;
+}
+
+
+.table-view:row-selection .table-row-cell:filled:selected:hover {
+    -fx-background-color: #a9aeb0;
+}
+
+
+.table-view:row-selection .table-row-cell:filled:selected {
+    -fx-background-color: #a9aeb0;
+}
+
+
+.table-view, .table-view:focused {
+  -fx-background-color:  #072330,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+}
+
+
+.table-view .column-header:hover {
+    -fx-background-color:   #072330;
+}
+
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color:    #2c2e30;
+    -fx-size: 45;
+    -fx-border-color:   white;
+    -fx-border-width: 0;
+    -fx-border-insets: 0;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color:   white;
+}
+
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color:  white;
+    -fx-border-width:0 0 0 0;
+    -fx-border-insets: 0;
+}
+
 #principal{
     -fx-background-image: url("../images/fondo.jpg");
-}
-
-.content {
-  -fx-background-color: rgba(0,0,0,0.2);
-  -fx-box-sizing: border-box;
-  -fx-box-shadow: 0 15 25 rgba(0,0,0,0.6);
-  -fx-border-radius: 20;
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
 }
 
 .text-input{
@@ -140,81 +198,4 @@
 {
     -fx-background-color :linear-gradient(to top left, #41951C, #D4CEE3);
     -fx-background-radius :  30 30 30 30;
-}
-
-.table-cell {
-    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
-    -fx-border-color:  #072330;
-    -fx-border-width:0 0 0 0;
-    -fx-box-border: transparent transparent;
-    -fx-font: 13px "Segoe UI";
-    -fx-border-insets: 0;
-}
-
-
-
-
-
-.table-row-cell:empty, .table-cell:empty:hover {
-    -fx-background-color:  transparent;
-}
-
-
-.table-row-cell:empty .table-cell {
-    -fx-border-width:0 0 0 0;
-}
-
-
-.table-view:row-selection .table-row-cell:filled:hover {
-    -fx-background-color: #7aa9bf;
-}
-
-
-.table-view:row-selection .table-row-cell:filled:selected:hover {
-    -fx-background-color: #7aa9bf;
-}
-
-
-.table-view:row-selection .table-row-cell:filled:selected {
-    -fx-background-color: #7aa9bf;
-}
-
-
-.table-view, .table-view:focused {
-  -fx-background-color:  #072330,-fx-box-border,-fx-control-inner-background;
-  -fx-background-insets: -1.4, 0, 1;
-  -fx-background-radius: 1.4, 0, 0;
-}
-
-
-.table-view .column-header .label{
-    -fx-text-fill: white;
-    -fx-alignment: CENTER;
-}
-
-
-.table-view .column-header:hover {
-    -fx-background-color:   #072330;
-}
-
-
-.table-view .column-header, .table-view .filler {
-    -fx-background-color:   #072330;
-    -fx-size: 45;
-    -fx-border-color:  #072330;
-    -fx-border-width: 0;
-    -fx-border-insets: 0;
-}
-
-
-.table-view .column-header-background {
-    -fx-background-color:   #072330;
-}
-
-
-.table-view .show-hide-columns-button {
-    -fx-background-color:  #072330;
-    -fx-border-color:  #072330;
-    -fx-border-width:0 0 0 0;
-    -fx-border-insets: 0;
 }

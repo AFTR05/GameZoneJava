@@ -61,8 +61,7 @@ public class ClientLoanViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-/*        button.setId("empanada");
-        button.setOnAction(event -> System.out.println(button.getId()));*/
+        mfc.getArcade().getChargerData().chargeData();
         datePickerLoanClient.setConverter(new LocalDateStringConverter(formatter,null));
         mfc.getArcade().getDinamicCreator().putOnDataAttraction(mfc.getArcade().getAttractionService().getAttractions(), vBoxPrincipal,datePickerLoanClient,mfc);
 

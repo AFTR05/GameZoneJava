@@ -10,123 +10,105 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminProfileViewController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminProfileViewController">
    <children>
-      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #051821;">
+      <AnchorPane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #051821;">
          <children>
-            <AnchorPane prefHeight="498.0" prefWidth="210.0">
+            <AnchorPane prefHeight="122.0" prefWidth="200.0">
                <children>
-                  <HBox layoutX="6.0" layoutY="390.0" prefHeight="18.0" prefWidth="187.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="42.0" fitWidth="40.0" layoutX="46.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/icons8-parque-temático-100.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Button fx:id="btnAttractionsAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToAttractions" prefHeight="26.0" prefWidth="74.0" text="Attractions">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="6.0" layoutY="336.0" prefHeight="18.0" prefWidth="187.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/icons8-loan-64.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Button fx:id="btnLoansAdminProfile" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="26.0" prefWidth="74.0" text="Loans">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="6.0" layoutY="282.0" prefHeight="18.0" prefWidth="187.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/icons8-contrato-de-trabajo-100.png" />
-                                 </image></ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Button fx:id="btnEmployeesAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToEmployees" text="Employees">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="6.0" layoutY="227.0" prefHeight="18.0" prefWidth="187.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/icons8-antecedentes-grupo-seleccionado-90 (1).png" />
-                                 </image></ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Button fx:id="btnClientsAdminProfile" layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToClients" prefHeight="26.0" prefWidth="74.0" text="Clients">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="6.0" layoutY="174.0" prefHeight="18.0" prefWidth="187.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="44.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/icons8-user-96.png" />
-                                 </image></ImageView>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Button layoutX="21.0" layoutY="12.0" mnemonicParsing="false" onAction="#changeToProfile" prefHeight="26.0" prefWidth="74.0" text="Profile">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </HBox>
-                  <ImageView fitHeight="109.0" fitWidth="200.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="109.0" fitWidth="200.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/user.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
+            <VBox layoutY="164.0" prefHeight="218.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="48.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnProfileAdminClient" alignment="CENTER" mnemonicParsing="false" onAction="#changeToProfile" prefHeight="48.0" prefWidth="200.0" styleClass="button2" text="       Profile">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icons8-user-96.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnClientAdminClient" alignment="CENTER" mnemonicParsing="false" onAction="#changeToClients" prefHeight="48.0" prefWidth="200.0" styleClass="button2" text="      Clients">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icons8-antecedentes-grupo-seleccionado-90 (1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnEmployeeAdminClient" alignment="CENTER" mnemonicParsing="false" onAction="#changeToEmployees" prefHeight="48.0" prefWidth="200.0" styleClass="button2" text=" Employees">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icons8-contrato-de-trabajo-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnLoanAdminClient" alignment="CENTER" mnemonicParsing="false" onAction="#changeToLoans" prefHeight="48.0" prefWidth="200.0" styleClass="button2" text="       Loans">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icons8-loan-64.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnAttractionsAdminClient" alignment="CENTER" mnemonicParsing="false" onAction="#changeToAttractions" prefHeight="48.0" prefWidth="200.0" styleClass="button2" text="Attractions">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/icons8-parque-temático-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
-      </VBox>
+      </AnchorPane>
       <VBox layoutX="200.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #072330;">
          <children>
             <AnchorPane prefHeight="501.0" prefWidth="606.0">
@@ -146,19 +128,34 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <TextField fx:id="txtUsernameAdminProfile" layoutX="143.0" layoutY="252.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" />
+                  <TextField fx:id="txtUsernameAdminProfile" layoutX="151.0" layoutY="250.0" prefHeight="26.0" prefWidth="314.0" promptText="Username" styleClass="textFilder" />
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="224.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/icons8-user-96.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="txtEmailAdminProfile" layoutX="143.0" layoutY="295.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" />
-                  <TextField fx:id="txtPasswordAdminProfile" layoutX="143.0" layoutY="343.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" />
-                  <Button fx:id="btnSaveAdminProfile" layoutX="270.0" layoutY="400.0" mnemonicParsing="false" onAction="#Save" prefHeight="26.0" prefWidth="60.0" text="Save">
+                  <TextField fx:id="txtEmailAdminProfile" layoutX="151.0" layoutY="293.0" prefHeight="26.0" prefWidth="314.0" promptText="Email" styleClass="textFilder" />
+                  <TextField fx:id="txtPasswordAdminProfile" layoutX="151.0" layoutY="341.0" prefHeight="26.0" prefWidth="314.0" promptText="Password" styleClass="textFilder" />
+                  <Button fx:id="btnSaveAdminProfile" layoutX="270.0" layoutY="400.0" mnemonicParsing="false" onAction="#Save" prefHeight="26.0" prefWidth="60.0" styleClass="button1" text="Save">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor></Button>
                   <Separator layoutY="28.0" opacity="0.2" orientation="VERTICAL" prefHeight="441.0" prefWidth="0.0" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="131.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-contraseña-1-96.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="16.0" layoutX="133.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-mensaje-90.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="131.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-tarjeta-de-empleado-96.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </children>

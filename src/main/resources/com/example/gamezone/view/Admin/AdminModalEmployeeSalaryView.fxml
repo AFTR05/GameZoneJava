@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #072330;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminModalEmployeeSalaryViewController">
+<AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #072330;" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminModalEmployeeSalaryViewController">
    <children>
       <TableView fx:id="tableModelEmployeeSalary" layoutX="152.0" layoutY="107.0" prefHeight="266.0" prefWidth="450.0">
         <columns>
@@ -35,24 +35,24 @@
       </Text>
       <VBox layoutX="24.0" layoutY="186.0" prefHeight="48.0" prefWidth="100.0" spacing="10.0">
          <children>
-            <Text fx:id="txtUsernameModalEmployee" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+            <Text fx:id="txtUsernameModalEmployee" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textFilder" text="Username">
                <VBox.margin>
                   <Insets left="8.0" />
                </VBox.margin>
             </Text>
-            <Text fx:id="txtEmailModalEmployee" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+            <Text fx:id="txtEmailModalEmployee" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-input" text="Email">
                <VBox.margin>
                   <Insets left="8.0" />
                </VBox.margin>
             </Text>
-            <TextField fx:id="txtSalaryModalEmployee" prefHeight="26.0" prefWidth="128.0" promptText="Salary" />
+            <TextField fx:id="txtSalaryModalEmployee" prefHeight="26.0" prefWidth="128.0" promptText="Salary" styleClass="textFilder" />
          </children>
       </VBox>
-      <Button fx:id="btnUpdateSalaryEmployeeModal" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#changeSalary" prefHeight="26.0" prefWidth="57.0" text="Update">
+      <Button fx:id="btnUpdateSalaryEmployeeModal" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#changeSalary" prefHeight="26.0" prefWidth="57.0" styleClass="button1" text="Update">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="btnCancelSalaryEmployeeModal" layoutX="77.0" layoutY="290.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="57.0" text="Cancel">
+      <Button fx:id="btnCancelSalaryEmployeeModal" layoutX="77.0" layoutY="290.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="57.0" styleClass="button1" text="Cancel">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>

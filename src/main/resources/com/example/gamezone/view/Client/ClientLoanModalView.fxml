@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #2c2e30;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.ClientLoanModalViewController">
+<AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #2c2e30;" stylesheets="@../../css/client.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.ClientLoanModalViewController">
    <children>
-      <TableView fx:id="tableModelClientSchedule" layoutX="152.0" layoutY="107.0" prefHeight="266.0" prefWidth="450.0">
+      <TableView fx:id="tableModelClientSchedule" layoutX="158.0" layoutY="107.0" prefHeight="266.0" prefWidth="450.0">
          <columns>
             <TableColumn fx:id="columnBeginHourLoanClient" prefWidth="150.0" text="Begin hour" />
             <TableColumn fx:id="columnEndHourLoanClient" prefWidth="150.0" text="End hour" />
@@ -47,7 +47,7 @@
             </Text>
          </children>
       </VBox>
-      <Button fx:id="btnScheduleLoanClient" layoutX="47.0" layoutY="266.0" mnemonicParsing="false" onAction="#selectSchedule" prefHeight="26.0" prefWidth="57.0" text="Select">
+      <Button fx:id="btnScheduleLoanClient" layoutX="47.0" layoutY="266.0" mnemonicParsing="false" onAction="#selectSchedule" prefHeight="26.0" prefWidth="57.0" styleClass="button1" text="Select">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

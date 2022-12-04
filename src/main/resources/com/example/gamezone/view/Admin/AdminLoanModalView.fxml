@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="630.0" style="-fx-background-color: #072330;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamezone.controller.AdminLoanModalViewController">
     <children>
-        <TableView fx:id="tableModelClientSchedule" layoutX="86.0" layoutY="106.0" prefHeight="266.0" prefWidth="450.0">
+        <TableView fx:id="tableModelClientSchedule" layoutX="86.0" layoutY="106.0" prefHeight="266.0" prefWidth="450.0" stylesheets="@../../css/style.css">
             <columns>
                 <TableColumn fx:id="columnBeginHourLoan" prefWidth="150.0" text="Begin hour" />
                 <TableColumn fx:id="columnEndHourLoan" prefWidth="150.0" text="End hour" />

@@ -18,6 +18,7 @@ public class EmployeeLoanViewController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         datePickerLoanEmployee.setConverter(new LocalDateStringConverter(formatter,null));
         mfc.getArcade().getDinamicCreator().putOnDataAttractionEmp(mfc.getArcade().getAttractionService().getAttractions(), vBoxPrincipal,datePickerLoanEmployee,mfc);
 
@@ -31,12 +32,12 @@ public class EmployeeLoanViewController implements Initializable {
 
     @FXML
     void changeToLoans(ActionEvent event) throws IOException {
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminLoanView.fxml");
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Employee/EmployeeLoanView.fxml");
     }
 
     @FXML
     void changeToProfile(ActionEvent event) throws IOException{
-        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Admin/AdminProfileView.fxml");
+        mfc.getArcade().getChangerFXML().sceneChange(event,"view/Employee/EmployeeProfileView.fxml");
     }
 
 }

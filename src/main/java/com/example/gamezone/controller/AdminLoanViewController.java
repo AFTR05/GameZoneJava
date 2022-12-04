@@ -17,6 +17,7 @@ public class AdminLoanViewController implements Initializable {
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mfc.getArcade().getChargerData().chargeData();
         datePickerLoanAdmin.setConverter(new LocalDateStringConverter(formatter,null));
         mfc.getArcade().getDinamicCreator().putOnDataAttractionEmp(mfc.getArcade().getAttractionService().getAttractions(), vBoxPrincipal,datePickerLoanAdmin,mfc);
     }

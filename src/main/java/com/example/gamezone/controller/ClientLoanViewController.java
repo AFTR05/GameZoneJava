@@ -25,6 +25,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+import java.util.concurrent.CompletableFuture;
 
 public class ClientLoanViewController implements Initializable {
     private ModelFactoryController mfc =ModelFactoryController.getInstance();
@@ -92,7 +93,22 @@ public class ClientLoanViewController implements Initializable {
         loanDTOSelected=mfc.getArcade().getClientLoanViewController().getLoanDTOSelected();
         if ((mfc.getArcade().getSelectValidator().validateLoanDTO(loanDTOSelected) && mfc.getArcade().getSelectValidator().validateAttraction(attractionSelected) && mfc.getArcade().getSelectValidator().validatePerson(meClient) && mfc.getArcade().getTimeValidator().validateDatePicker(datePickerLoanClient))){
             mfc.createLoan(LocalDateTime.parse(datePickerLoanClient.getValue().toString()+"T"+loanDTOSelected.getBeginHour()),LocalDateTime.parse(datePickerLoanClient.getValue().toString()+"T"+loanDTOSelected.getEndHour()),meClient,attractionSelected);
-            mfc.getArcade().getAjustableData().loanAdjust();
+            mfc.getArcade().getUpdaterObject().clientUpdate(mfc.getArcade().getSercherObject().getClient(meClient.getName(), meClient.getPassword(), mfc.getArcade().getClientService().getListClients()));
+             CompletableFuture.runAsync(()-> {
+                 try {
+                     mfc.getArcade().getAjustableData().loanAdjust();
+                 } catch (IOException e) {
+                     throw new RuntimeException(e);
+                 }
+             });
+             CompletableFuture.runAsync(()-> {
+                 try {
+                     mfc.getArcade().getPersistenceClient().saveClients(mfc.getArcade().getClientService().getListClients());
+                 } catch (IOException e) {
+                     throw new RuntimeException(e);
+                 }
+             });
+            mfc.getArcade().getChangerFXML().sceneChange(event,"view/Client/ClientLoanView.fxml");
         }
     }
 

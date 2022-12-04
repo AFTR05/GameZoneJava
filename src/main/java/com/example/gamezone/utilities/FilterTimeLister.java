@@ -29,7 +29,7 @@ public class FilterTimeLister {
     public ArrayList<Loan> limitToAttraction(ArrayList<Loan> loans, Attraction attraction){
         if (loans!=null){
             ArrayList<Loan> listLoanFilter;
-            listLoanFilter=(ArrayList<Loan>) loans.stream().filter(x->attraction.equals(x.getAttraction())).collect(Collectors.toList());
+            listLoanFilter=(ArrayList<Loan>) loans.stream().filter(x->attraction.getCode().equals(x.getAttraction().getCode())).collect(Collectors.toList());
             return listLoanFilter;
         }else{
             return null;

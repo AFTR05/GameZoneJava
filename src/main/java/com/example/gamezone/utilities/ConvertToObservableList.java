@@ -26,7 +26,7 @@ public class ConvertToObservableList {
     public ObservableList<LoanDTO> loanDTOObservable(Attraction attraction, ObservableList<LoanDTO> loanDTOS , LocalDate date){
         loanDTOS.clear();
         for (int x=7;x<=20;x++){
-            if (Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>x && date.isEqual(LocalDate.now())){
+            if (Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>=x && date.isEqual(LocalDate.now())){
                 continue;
             }
             if (x>9){
@@ -55,7 +55,7 @@ public class ConvertToObservableList {
         ArrayList<Loan> filterLoans=arcade.getFilterTimeLister().limitAll(listLoan,attraction,date.toString());
         if (filterLoans!=null){
             for (int x=0;x<filterLoans.size();x++){
-                if (Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>x && date.isEqual(LocalDate.now())){
+                if (Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(LocalDateTime.now()).split(":")[0])>=Integer.parseInt(arcade.getTimeConverter().localDateTimeToHour(filterLoans.get(x).getBeginDate()).split(":")[0]) && date.isEqual(LocalDate.now())){
                     continue;
                 }else {
                     loanDTOS.add(new LoanDTO(arcade.getTimeConverter().localDateTimeToHour(filterLoans.get(x).getBeginDate()),arcade.getTimeConverter().localDateTimeToHour(filterLoans.get(x).getEndDate()),filterLoans.get(x).getAttraction().getName(),filterLoans.get(x).getAttraction().getCode()));

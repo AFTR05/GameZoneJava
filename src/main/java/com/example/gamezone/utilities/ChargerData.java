@@ -73,10 +73,12 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getLoanService().setListLoans(arcade.getPersistenceLoan().chargeLoan());
-                System.out.println(Thread.currentThread().getName());
+                arcade.getLoanService().setListLoans(arcade.getTimeComparator().editForTime(arcade.getLoanService().getListLoans()));
+                arcade.getPersistenceLoan().saveEmployee(arcade.getLoanService().getListLoans());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println(Thread.currentThread().getName());
         });
     }
 }

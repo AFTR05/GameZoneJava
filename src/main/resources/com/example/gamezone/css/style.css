@@ -10,7 +10,6 @@
 .content {
   -fx-background-color: rgba(0,0,0,0.2);
   -fx-box-sizing: border-box;
-  -fx-box-shadow: 0 15 25 rgba(0,0,0,0.6);
   -fx-border-radius: 20;
 }
 

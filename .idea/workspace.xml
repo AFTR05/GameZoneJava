@@ -4,32 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Pruebas terminadas">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/css/client.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-contraseña-1-96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-mensaje-90.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/images/icons8-tarjeta-de-empleado-96.png" afterDir="false" />
+    <list default="true" id="e71299b5-f349-4b69-bcb7-e258e9855a11" name="Changes" comment="Terminado css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/loans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Data/loans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminLoanViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/AdminLoanViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/ClientLoanViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeLoanViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeLoanViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/controller/EmployeeProfileViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChargerData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gamezone/utilities/ChargerData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminAttractionView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminAttractionView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminClientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminClientView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminEmployeeView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminEmployeeView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanModalView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanModalView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminLoanView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminModalEmployeeSalaryView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminModalEmployeeSalaryView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Admin/AdminProfileView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanModalView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanModalView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientLoanView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Client/ClientProfileView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeLoanView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeLoanView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Employee/EmployeeProfileView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/loginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/loginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/signUpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/gamezone/view/Login/signUpView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670170474795</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Terminado css">
+      <created>1670197839557</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670197839557</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,7 +253,8 @@
     <MESSAGE value="Loan client listo" />
     <MESSAGE value="Terminado funcionalidad" />
     <MESSAGE value="Pruebas terminadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pruebas terminadas" />
+    <MESSAGE value="Terminado css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminado css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

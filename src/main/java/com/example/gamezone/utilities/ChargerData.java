@@ -16,7 +16,6 @@ public class ChargerData {
     }
     public void chargeData(){
             ExecutorService service= Executors.newFixedThreadPool(5);
-            CyclicBarrier barrier=new CyclicBarrier(5);
             chargeAdministrator(service);
             chargeEmployees(service);
             chargeClients(service);
@@ -29,7 +28,6 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getAdministratorService().setAdministrator(arcade.getPersistenceAdmin().chargeAdmin());
-                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -40,7 +38,6 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getClientService().setListClients(arcade.getPersistenceClient().chargeClient());
-                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -51,7 +48,6 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getEmployeeService().setListEmployee(arcade.getPersistenceEmployee().chargeEmployee());
-                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -62,7 +58,6 @@ public class ChargerData {
         service.submit(()-> {
             try {
                 arcade.getAttractionService().setAttractions(arcade.getPersistenceAttraction().chargeAttractions());
-                System.out.println(Thread.currentThread().getName());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -78,7 +73,6 @@ public class ChargerData {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Thread.currentThread().getName());
         });
     }
 }
